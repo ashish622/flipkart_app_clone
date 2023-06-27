@@ -152,7 +152,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                             backgroundColor: Colors.blueGrey,
                             child: Image(image: AssetImage('assets/images/icons/img.png'),width: 15,height: 15,)
                         ),
-                        Text('Supercoins',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold))
+                        Text('Supercoins',style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold))
                       ],
                     ),
                   ),
@@ -166,7 +166,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           backgroundColor: Colors.blueGrey,
                           child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 18,),
                         ),
-                        Text('NextGen\nBrands',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
+                        Text('NextGen\nBrands',style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -180,7 +180,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           backgroundColor: Colors.blueGrey,
                           child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 18,),
                         ),
-                        Text('Credit',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
+                        Text('Credit',style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -194,7 +194,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           backgroundColor: Colors.blueGrey,
                           child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 18,),
                         ),
-                        Text('LiveShop+',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
+                        Text('LiveShop+',style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -208,7 +208,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           backgroundColor: Colors.blueGrey,
                           child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 18,),
                         ),
-                        Text('EMI',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
+                        Text('EMI',style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -222,7 +222,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                             backgroundColor: Colors.blueGrey,
                             child: Image(image: AssetImage('assets/images/icons/img_1.png'),width: 15,height: 15,)
                         ),
-                        Text('Students Club',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
+                        Text('Students Club',style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -236,7 +236,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                             backgroundColor: Colors.blueGrey,
                             child: Image(image: AssetImage('assets/images/icons/img_5.png'),width: 15,height: 15,)
                         ),
-                        Text('Plus',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
+                        Text('Plus',style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -250,7 +250,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           backgroundColor: Colors.blueGrey,
                           child: Icon(Icons.group_outlined,color: Colors.yellow,size: 18,),
                         ),
-                        Text('Group Buy',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
+                        Text('Group Buy',style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -264,7 +264,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                             backgroundColor: Colors.blueGrey,
                             child: Icon(Icons.linked_camera, color: Colors.yellow,size: 18,)
                         ),
-                        Text('Camera',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
+                        Text('Camera',style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -278,7 +278,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           backgroundColor: Colors.blueGrey,
                           child: Image(image: AssetImage('assets/images/icons/img_4.png'),width: 15,height: 15,),
                         ),
-                        Text('Fire Drops',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
+                        Text('Fire Drops',style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -309,8 +309,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           height: 70,
                           child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                         ),
-                        Text('Handpicked Deals',style: TextStyle(fontSize: 10,),),
-                        Text('Just For You',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
+                        Text('Handpicked Deals',style: TextStyle(fontSize: 12,),),
+                        Text('Just For You',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -330,8 +330,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           height: 70,
                           child: Image(image: AssetImage('assets/images/product/img_2.png'),fit: BoxFit.cover,),
                         ),
-                        Text('Handpicked Deals',style: TextStyle(fontSize: 10,),),
-                        Text('Just For You',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
+                        Text('Handpicked Deals',style: TextStyle(fontSize: 12,),),
+                        Text('Just For You',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -351,12 +351,12 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           height: 70,
                           child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
                         ),
-                        Text('Handpicked Deals',style: TextStyle(fontSize: 10,),),
-                        Text('Just For You',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
+                        Text('Handpicked Deals',style: TextStyle(fontSize: 12,),),
+                        Text('Just For You',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -480,7 +480,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
             ),
           ),
 
-          //Sponsered products
+          //Sponsored products
           const Padding(
             padding:  EdgeInsets.fromLTRB(10, 20, 10, 10),
             child:  Text(
@@ -507,7 +507,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   onTap: (){},
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.30,
-                    height: 160,
+                    height: 165,
                     decoration: BoxDecoration(
                         border: Border.all(width: 1,color: Colors.black12)
                     ),
@@ -518,9 +518,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           height: 120,
                           child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                         ),
-                        Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                        Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                        Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                        Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                        Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                        Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                       ],
                     ),
                   ),
@@ -529,7 +529,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   onTap: (){},
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.30,
-                    height: 160,
+                    height: 165,
                     decoration: BoxDecoration(
                         border: Border.all(width: 1,color: Colors.black12)
                     ),
@@ -540,9 +540,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           height: 120,
                           child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
                         ),
-                        Text('Paintings',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                        Text('Upto 60% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                        Text('Big Discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                        Text('Paintings',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                        Text('Upto 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                        Text('Big Discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                       ],
                     ),
                   ),
@@ -551,7 +551,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   onTap: (){},
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.30,
-                    height: 160,
+                    height: 165,
                     decoration: BoxDecoration(
                         border: Border.all(width: 1,color: Colors.black12)
                     ),
@@ -562,9 +562,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           height: 120,
                           child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
                         ),
-                        Text('Artificial Plants',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                        Text('Upto 80% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                        Text('Big discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                        Text('Artificial Plants',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                        Text('Upto 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                        Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                       ],
                     ),
                   ),
@@ -591,7 +591,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   onTap: (){},
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.30,
-                    height: 160,
+                    height: 165,
                     decoration: BoxDecoration(
                         border: Border.all(width: 1,color: Colors.black12)
                     ),
@@ -602,9 +602,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           height: 120,
                           child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                         ),
-                        Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                        Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                        Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                        Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                        Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                        Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                       ],
                     ),
                   ),
@@ -613,7 +613,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   onTap: (){},
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.30,
-                    height: 160,
+                    height: 165,
                     decoration: BoxDecoration(
                         border: Border.all(width: 1,color: Colors.black12)
                     ),
@@ -624,9 +624,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           height: 120,
                           child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
                         ),
-                        Text('Paintings',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                        Text('Upto 60% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                        Text('Big Discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                        Text('Paintings',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                        Text('Upto 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                        Text('Big Discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                       ],
                     ),
                   ),
@@ -635,7 +635,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   onTap: (){},
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.30,
-                    height: 160,
+                    height: 165,
                     decoration: BoxDecoration(
                         border: Border.all(width: 1,color: Colors.black12)
                     ),
@@ -646,9 +646,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           height: 120,
                           child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
                         ),
-                        Text('Artificial Plants',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                        Text('Upto 80% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                        Text('Big discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                        Text('Artificial Plants',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                        Text('Upto 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                        Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                       ],
                     ),
                   ),
@@ -716,9 +716,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 height: 135,
                                 child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                               ),
-                              Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                              Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
                         ),
@@ -741,9 +741,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 height: 135,
                                 child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
                               ),
-                              Text('Paintings',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                              Text('Upto 60% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Big Discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              Text('Paintings',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('Upto 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Big Discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
                         ),
@@ -766,9 +766,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 height: 135,
                                 child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
                               ),
-                              Text('Artificial Plants',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                              Text('Upto 80% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Big discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              Text('Artificial Plants',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('Upto 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
                         ),
@@ -796,9 +796,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 height: 135,
                                 child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                               ),
-                              Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                              Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
                         ),
@@ -821,9 +821,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 height: 135,
                                 child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
                               ),
-                              Text('Paintings',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                              Text('Upto 60% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Big Discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              Text('Paintings',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('Upto 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Big Discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
                         ),
@@ -846,9 +846,9 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 height: 135,
                                 child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
                               ),
-                              Text('Artificial Plants',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                              Text('Upto 80% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Big discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              Text('Artificial Plants',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('Upto 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
                         ),
@@ -891,12 +891,12 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                               children: const [
                                 SizedBox(
                                   width: double.infinity,
-                                  height: 135,
+                                  height: 130,
                                   child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                                 ),
-                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                                Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                               ],
                             ),
                           ),
@@ -917,12 +917,12 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                               children: const [
                                 SizedBox(
                                   width: double.infinity,
-                                  height: 135,
+                                  height: 130,
                                   child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                                 ),
-                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                                Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                               ],
                             ),
                           ),
@@ -943,12 +943,12 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                               children: const [
                                 SizedBox(
                                   width: double.infinity,
-                                  height: 135,
+                                  height: 130,
                                   child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                                 ),
-                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                                Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                               ],
                             ),
                           ),
@@ -969,12 +969,12 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                               children: const [
                                 SizedBox(
                                   width: double.infinity,
-                                  height: 135,
+                                  height: 130,
                                   child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                                 ),
-                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                                Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                               ],
                             ),
                           ),
@@ -995,12 +995,12 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                               children: const [
                                 SizedBox(
                                   width: double.infinity,
-                                  height: 135,
+                                  height: 130,
                                   child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                                 ),
-                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                                Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                               ],
                             ),
                           ),
@@ -1021,12 +1021,12 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                               children: const [
                                 SizedBox(
                                   width: double.infinity,
-                                  height: 135,
+                                  height: 130,
                                   child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                                 ),
-                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                                Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                               ],
                             ),
                           ),
@@ -1047,12 +1047,12 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                               children: const [
                                 SizedBox(
                                   width: double.infinity,
-                                  height: 135,
+                                  height: 130,
                                   child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
                                 ),
-                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
-                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
-                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                                Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                               ],
                             ),
                           ),
