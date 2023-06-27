@@ -11,9 +11,10 @@ class ToggleScreen1 extends StatefulWidget {
 class _ToggleScreen1State extends State<ToggleScreen1> {
   var val = false;
   final List<String> _images = [
-    'assets/images/product/img_7.png',
+    'assets/images/product/img_5.png',
     'assets/images/product/img_2.png',
-    'assets/images/product/img_4.png'
+    'assets/images/product/img_4.png',
+    'assets/images/product/img_6.png'
     // Add more image paths as needed
   ];
   PageController _pageController = PageController();
@@ -55,6 +56,7 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          // Search and brand filter
           Container(
             width: double.infinity,
             height: 80,
@@ -62,9 +64,9 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
             child: Row(
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text('Brand Mall',style: TextStyle(fontSize: 10),),
+                    const Text('Brand Mall',style: TextStyle(fontSize: 8,fontWeight: FontWeight.bold),),
                     Switch(value: val, onChanged: (bool value){
                       setState(() {
                         val = value;
@@ -74,28 +76,28 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width*0.75,
-                  height: 50,
+                  height: 40,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(width: 1, color: Colors.black12),
-                      color: Colors.white24
+                      color: Colors.blueGrey.withOpacity(0.1),
                   ),
                   child: TextFormField(
                     decoration: InputDecoration(
                         labelText: 'search for products',
                         disabledBorder: InputBorder.none,
                         border: InputBorder.none,
-                        prefixIcon: Icon(Icons.search_outlined,color: Colors.black12,size: 20,),
+                        prefixIcon: Icon(Icons.search_outlined,color: Colors.black26,size: 20,),
                         suffixIcon: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             IconButton(
                                 onPressed: (){},
-                                icon: Icon(Icons.mic_none_rounded,color: Colors.black12,size: 20,),
+                                icon: Icon(Icons.mic_none_rounded,color: Colors.black26,size: 20,),
                             ),
                             IconButton(
                                 onPressed: (){},
-                                icon: Icon(Icons.camera_alt,color: Colors.black12,size: 20,),
+                                icon: Icon(Icons.camera_alt,color: Colors.black26,size: 20,),
                             )
                           ],
                         )
@@ -105,6 +107,8 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
               ],
             ),
           ),
+
+          //Products Slider
           SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 200,
@@ -129,8 +133,10 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
 
               )
           ),
+
+          // Scrollable menu icons
           Container(
-            height: 90,
+            height: 100,
             padding: EdgeInsets.all(10),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -145,9 +151,9 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                         CircleAvatar(
                           radius: 15,
                           backgroundColor: Colors.blueGrey,
-                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                          child: Image(image: AssetImage('assets/images/icons/img.png'),width: 15,height: 15,)
                         ),
-                        Text('Supercoins')
+                        Text('Supercoins',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold))
                       ],
                     ),
                   ),
@@ -159,9 +165,9 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                         CircleAvatar(
                           radius: 15,
                           backgroundColor: Colors.blueGrey,
-                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 18,),
                         ),
-                        Text('Supercoins')
+                        Text('NextGen\nBrands',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -173,9 +179,9 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                         CircleAvatar(
                           radius: 15,
                           backgroundColor: Colors.blueGrey,
-                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 18,),
                         ),
-                        Text('Supercoins')
+                        Text('Credit',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -187,9 +193,9 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                         CircleAvatar(
                           radius: 15,
                           backgroundColor: Colors.blueGrey,
-                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 18,),
                         ),
-                        Text('Supercoins')
+                        Text('LiveShop+',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -201,9 +207,9 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                         CircleAvatar(
                           radius: 15,
                           backgroundColor: Colors.blueGrey,
-                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 18,),
                         ),
-                        Text('Supercoins')
+                        Text('EMI',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -215,9 +221,9 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                         CircleAvatar(
                           radius: 15,
                           backgroundColor: Colors.blueGrey,
-                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                          child: Image(image: AssetImage('assets/images/icons/img_1.png'),width: 15,height: 15,)
                         ),
-                        Text('Supercoins')
+                        Text('Students Club',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -229,9 +235,9 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                         CircleAvatar(
                           radius: 15,
                           backgroundColor: Colors.blueGrey,
-                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                          child: Image(image: AssetImage('assets/images/icons/img_5.png'),width: 15,height: 15,)
                         ),
-                        Text('Supercoins')
+                        Text('Plus',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -243,9 +249,9 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                         CircleAvatar(
                           radius: 15,
                           backgroundColor: Colors.blueGrey,
-                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                          child: Icon(Icons.group_outlined,color: Colors.yellow,size: 18,),
                         ),
-                        Text('Supercoins')
+                        Text('Group Buy',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -257,9 +263,23 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                         CircleAvatar(
                           radius: 15,
                           backgroundColor: Colors.blueGrey,
-                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                          child: Icon(Icons.linked_camera, color: Colors.yellow,size: 18,)
                         ),
-                        Text('Supercoins')
+                        Text('Camera',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: const [
+                        CircleAvatar(
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Image(image: AssetImage('assets/images/icons/img_4.png'),width: 15,height: 15,),
+                        ),
+                        Text('Fire Drops',style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),)
                       ],
                     ),
                   ),
@@ -267,6 +287,8 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
               ),
             ),
           ),
+
+          // Suggestion and deals
           Container(
             width: MediaQuery.of(context).size.width,
             padding: EdgeInsets.all(8.0),
@@ -339,6 +361,8 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
               ],
             ),
           ),
+
+          //Discounts on products
           Container(
             width: MediaQuery.of(context).size.width,
             height: 450,
@@ -352,17 +376,20 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text('Discount for you',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.black),),
-                      Container(
-                        width: 20,
-                        height: 20,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.purple
+                      const Text('Discounts for you',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.black),),
+                      InkWell(
+                        child: Container(
+                          width: 20,
+                          height: 20,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.purple
+                          ),
+                          child: const Center(
+                            child: Icon(Icons.arrow_forward_ios,color: Colors.white,size: 14,),
+                          ),
                         ),
-                        child: const Center(
-                          child: Icon(Icons.arrow_forward_ios,color: Colors.white,size: 14,),
-                        ),
+                        onTap: (){},
                       )
                     ],
                   ),
@@ -453,6 +480,8 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
               ),
             ),
           ),
+
+          //Sponsered products
           const Padding(
             padding:  EdgeInsets.fromLTRB(10, 20, 10, 10),
             child:  Text(
@@ -628,6 +657,414 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
               ],
             ),
           ),
+
+        //  Suggestions Based on Activity
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8, 12, 8, 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Suggested for  You',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                    Text('Based on Your Activity',style: TextStyle(fontSize: 10,),),
+                  ],
+                ),
+                InkWell(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: Colors.purple
+                    ),
+                    width: 20,
+                    height: 20,
+                    child: Icon(Icons.arrow_forward_ios,color: Colors.white,size: 16,),
+                  ),
+                  onTap: (){
+
+                  },
+                )
+              ],
+            ),
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            padding: EdgeInsets.all(8.0),
+            decoration: BoxDecoration(
+                color: Colors.white,
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                      child: InkWell(
+                        onTap: (){},
+                        child: Container(
+                          width: MediaQuery.of(context).size.width*0.27,
+                          height: 180,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 1,color: Colors.black)
+                          ),
+                          child: Column(
+                            children: const [
+                              SizedBox(
+                                width: double.infinity,
+                                height: 135,
+                                child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                              ),
+                              Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                              Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                      child: InkWell(
+                        onTap: (){},
+                        child: Container(
+                          width: MediaQuery.of(context).size.width*0.27,
+                          height: 180,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 1,color: Colors.black)
+                          ),
+                          child: Column(
+                            children: const [
+                              SizedBox(
+                                width: double.infinity,
+                                height: 135,
+                                child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
+                              ),
+                              Text('Paintings',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                              Text('Upto 60% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Big Discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                      child: InkWell(
+                        onTap: (){},
+                        child: Container(
+                          width: MediaQuery.of(context).size.width*0.27,
+                          height: 180,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 1,color: Colors.black)
+                          ),
+                          child: Column(
+                            children: const [
+                              SizedBox(
+                                width: double.infinity,
+                                height: 135,
+                                child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
+                              ),
+                              Text('Artificial Plants',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                              Text('Upto 80% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Big discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                      child: InkWell(
+                        onTap: (){},
+                        child: Container(
+                          width: MediaQuery.of(context).size.width*0.27,
+                          height: 180,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 1,color: Colors.black)
+                          ),
+                          child: Column(
+                            children: const [
+                              SizedBox(
+                                width: double.infinity,
+                                height: 135,
+                                child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                              ),
+                              Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                              Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                      child: InkWell(
+                        onTap: (){},
+                        child: Container(
+                          width: MediaQuery.of(context).size.width*0.27,
+                          height: 180,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 1,color: Colors.black)
+                          ),
+                          child: Column(
+                            children: const [
+                              SizedBox(
+                                width: double.infinity,
+                                height: 135,
+                                child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
+                              ),
+                              Text('Paintings',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                              Text('Upto 60% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Big Discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                      child: InkWell(
+                        onTap: (){},
+                        child: Container(
+                          width: MediaQuery.of(context).size.width*0.27,
+                          height: 180,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 1,color: Colors.black)
+                          ),
+                          child: Column(
+                            children: const [
+                              SizedBox(
+                                width: double.infinity,
+                                height: 135,
+                                child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
+                              ),
+                              Text('Artificial Plants',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                              Text('Upto 80% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Big discounts',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+          // Featured Collection
+          Container(
+            height: 230,
+            color: Colors.green,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: const Text('Featured on FLipkart',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white)),
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                        child: InkWell(
+                          onTap: (){},
+                          child: Container(
+                            width: MediaQuery.of(context).size.width*0.27,
+                            height: 180,
+                            decoration: BoxDecoration(
+                              border: Border.all(width: 2,color: Colors.white),
+                              color: Colors.white,
+                            ),
+                            child: Column(
+                              children: const [
+                                SizedBox(
+                                  width: double.infinity,
+                                  height: 135,
+                                  child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                ),
+                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                        child: InkWell(
+                          onTap: (){},
+                          child: Container(
+                            width: MediaQuery.of(context).size.width*0.27,
+                            height: 180,
+                            decoration: BoxDecoration(
+                              border: Border.all(width: 2,color: Colors.white),
+                              color: Colors.white,
+                            ),
+                            child: Column(
+                              children: const [
+                                SizedBox(
+                                  width: double.infinity,
+                                  height: 135,
+                                  child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                ),
+                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                        child: InkWell(
+                          onTap: (){},
+                          child: Container(
+                            width: MediaQuery.of(context).size.width*0.27,
+                            height: 180,
+                            decoration: BoxDecoration(
+                              border: Border.all(width: 2,color: Colors.white),
+                              color: Colors.white,
+                            ),
+                            child: Column(
+                              children: const [
+                                SizedBox(
+                                  width: double.infinity,
+                                  height: 135,
+                                  child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                ),
+                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                        child: InkWell(
+                          onTap: (){},
+                          child: Container(
+                            width: MediaQuery.of(context).size.width*0.27,
+                            height: 180,
+                            decoration: BoxDecoration(
+                              border: Border.all(width: 2,color: Colors.white),
+                              color: Colors.white,
+                            ),
+                            child: Column(
+                              children: const [
+                                SizedBox(
+                                  width: double.infinity,
+                                  height: 135,
+                                  child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                ),
+                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+          padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+          child: InkWell(
+            onTap: (){},
+            child: Container(
+              width: MediaQuery.of(context).size.width*0.27,
+              height: 180,
+              decoration: BoxDecoration(
+                border: Border.all(width: 2,color: Colors.white),
+                color: Colors.white,
+              ),
+              child: Column(
+                children: const [
+                  SizedBox(
+                    width: double.infinity,
+                    height: 135,
+                    child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                  ),
+                  Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                  Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                  Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                ],
+              ),
+            ),
+          ),
+        ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                        child: InkWell(
+                          onTap: (){},
+                          child: Container(
+                            width: MediaQuery.of(context).size.width*0.27,
+                            height: 180,
+                            decoration: BoxDecoration(
+                              border: Border.all(width: 2,color: Colors.white),
+                              color: Colors.white,
+                            ),
+                            child: Column(
+                              children: const [
+                                SizedBox(
+                                  width: double.infinity,
+                                  height: 135,
+                                  child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                ),
+                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                        child: InkWell(
+                          onTap: (){},
+                          child: Container(
+                            width: MediaQuery.of(context).size.width*0.27,
+                            height: 180,
+                            decoration: BoxDecoration(
+                              border: Border.all(width: 2,color: Colors.white),
+                              color: Colors.white,
+                            ),
+                            child: Column(
+                              children: const [
+                                SizedBox(
+                                  width: double.infinity,
+                                  height: 135,
+                                  child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                ),
+                                Text('Headphones',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                                Text('min 50% off',style: TextStyle(fontSize: 10,color: Colors.green,fontWeight: FontWeight.bold),),
+                                Text('Best deals',style: TextStyle(fontSize: 10,color: Colors.black26),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
