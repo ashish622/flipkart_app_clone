@@ -25,6 +25,7 @@ class _HomepageState extends State<Homepage> {
         children: [
           const SizedBox(height: 50,),
           Container(
+            padding: const EdgeInsets.fromLTRB(8, 5, 8, 5),
             decoration: BoxDecoration(
               border: Border.all(width: 0,color: Colors.transparent)
             ),
@@ -68,7 +69,7 @@ class _HomepageState extends State<Homepage> {
               ],
             ),
           ),
-          _selectedItem==0?ToggleScreen1():ToggleScreen2()
+          Expanded(child: _selectedItem==0?ToggleScreen1():ToggleScreen2())
         ],
       ),
     );

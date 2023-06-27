@@ -11,9 +11,8 @@ class ToggleScreen2 extends StatefulWidget {
 class _ToggleScreen2State extends State<ToggleScreen2> {
   var val = false;
   List<String> _images = [
-    'assets/images/img_5.png',
+    'assets/images/img_7.png',
     'assets/images/img_2.png',
-    'assets/images/img_6.png',
     'assets/images/img_4.png'
     // Add more image paths as needed
   ];
@@ -51,6 +50,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: Column(
         children: [
           Container(
@@ -117,7 +117,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
               )
           ),
           Container(
-            height: 80,
+            height: 90,
             padding: EdgeInsets.all(10),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -127,11 +127,12 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.currency_rupee),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
                         Text('Supercoins')
                       ],
@@ -140,94 +141,209 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.branding_watermark),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('NextGen Brands')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.credit_card),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('credit')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.live_tv),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('LiveShop+')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.price_change_outlined),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('EMI')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.cast_for_education),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('Students club')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.cast_for_education),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('Students club')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.cast_for_education),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('Students club')
+                        Text('Supercoins')
                       ],
                     ),
-                  )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: const [
+                        CircleAvatar(
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                        ),
+                        Text('Supercoins')
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            padding: EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width*0.30,
+                  height: 100,
+                  decoration: BoxDecoration(
+                      border: Border.all(width: 1,color: Colors.black12)
+                  ),
+                  child: Column(
+                    children: const [
+                      SizedBox(
+                        width: double.infinity,
+                        height: 70,
+                        child: Image(image: AssetImage('assets/images/img_4.png'),fit: BoxFit.cover,),
+                      ),
+                      Text('Handpicked Deals',style: TextStyle(fontSize: 10,),),
+                      Text('Just For You',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
+                    ],
+                  ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width*0.30,
+                  height: 100,
+                  decoration: BoxDecoration(
+                      border: Border.all(width: 1,color: Colors.black12)
+                  ),
+                  child: Column(
+                    children: const [
+                      SizedBox(
+                        width: double.infinity,
+                        height: 70,
+                        child: Image(image: AssetImage('assets/images/img_4.png'),fit: BoxFit.cover,),
+                      ),
+                      Text('Handpicked Deals',style: TextStyle(fontSize: 10,),),
+                      Text('Just For You',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
+                    ],
+                  ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width*0.30,
+                  height: 100,
+                  decoration: BoxDecoration(
+                      border: Border.all(width: 1,color: Colors.black12)
+                  ),
+                  child: Column(
+                    children: const [
+                      SizedBox(
+                        width: double.infinity,
+                        height: 70,
+                        child: Image(image: AssetImage('assets/images/img_4.png'),fit: BoxFit.cover,),
+                      ),
+                      Text('Handpicked Deals',style: TextStyle(fontSize: 10,),),
+                      Text('Just For You',style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: 200,
+            decoration: BoxDecoration(
+                color: Colors.lightBlue
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text('Discount for you',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.black),),
+                      Container(
+                        width: 20,
+                        height: 20,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.purple
+                        ),
+                        child: const Center(
+                          child: Icon(Icons.arrow_forward_ios,color: Colors.white,size: 14,),
+                        ),
+                      )
+                    ],
+                  ),
                 ],
               ),
             ),

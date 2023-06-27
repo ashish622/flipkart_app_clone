@@ -70,30 +70,31 @@ class _MyAppState extends State<MyApp> {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedIndex,
           onTap: _onTabSelected,
+          selectedItemColor: Colors.blue,
+          unselectedItemColor: Colors.black,
+          showUnselectedLabels: true,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined,color: Colors.black12,),
+                icon: Icon(Icons.home_outlined,color: selectedIndex==0?Colors.blue:Colors.black,),
               label: 'Home'
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.category_outlined,color: Colors.black12,),
+                icon: Icon(Icons.category_outlined,color: selectedIndex==1?Colors.blue:Colors.black,),
                 label: 'Categories'
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.notifications_none_outlined,color: Colors.black12,),
+                icon: Icon(Icons.notifications_none_outlined,color: selectedIndex==2?Colors.blue:Colors.black,),
                 label: 'Notifications'
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle_outlined,color: Colors.black12,),
+                icon: Icon(Icons.account_circle_outlined,color: selectedIndex==3?Colors.blue:Colors.black,),
                 label: 'Account'
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart_sharp,color: Colors.black12,),
-                label: 'Cart'
+                icon: Icon(Icons.shopping_cart_sharp,color: selectedIndex==4?Colors.blue:Colors.black,),
+                label: 'Cart',
             ),
           ],
-          selectedLabelStyle: TextStyle(color: Colors.blue), // Custom selected label color
-          unselectedLabelStyle: TextStyle(color: Colors.black),
         ),
       )
     );
