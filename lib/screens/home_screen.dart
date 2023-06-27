@@ -49,7 +49,7 @@ class _HomepageState extends State<Homepage> {
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                        color: _selectedItem==0?Colors.blue:Colors.green.withOpacity(0.5)
+                        color: _selectedItem==0?Colors.blue:Colors.blue.withOpacity(0.4)
                     ),
                     child: const Center(child: Image(image: AssetImage('assets/images/logos/img_1.png'),width: 60,height: 50,)),
                   ),
@@ -61,7 +61,7 @@ class _HomepageState extends State<Homepage> {
                     height: 60,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: _selectedItem==1?Colors.blue:Colors.green.withOpacity(0.5)
+                      color: _selectedItem==1?Colors.green:Colors.green.withOpacity(0.4)
                     ),
                     child: const Center(child: Image(image: AssetImage('assets/images/logos/img.png'),width: 60,height: 50,)),
                   ),
