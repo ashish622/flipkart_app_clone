@@ -36,6 +36,9 @@ class _HomepageState extends State<Homepage> {
                 });
               },
               borderRadius: BorderRadius.circular(16),
+              hoverColor: Colors.transparent,
+              fillColor: Colors.transparent,
+              renderBorder: false,
               children: [
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0,0,10,0),
@@ -44,10 +47,10 @@ class _HomepageState extends State<Homepage> {
                     height: 60,
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: _selectedItem==0?bgColor:conColors,
                       borderRadius: BorderRadius.circular(16),
+                        color: _selectedItem==0?Colors.blue:Colors.green.withOpacity(0.5)
                     ),
-                    child: const Center(child: Image(image: AssetImage('assets/images/img_1.png'),width: 60,height: 50,)),
+                    child: const Center(child: Image(image: AssetImage('assets/images/logos/img_1.png'),width: 60,height: 50,)),
                   ),
                 ),
                 Padding(
@@ -56,10 +59,10 @@ class _HomepageState extends State<Homepage> {
                     width: MediaQuery.of(context).size.width*0.45,
                     height: 60,
                     decoration: BoxDecoration(
-                      color: _selectedItem==1?bgColor:conColors,
                       borderRadius: BorderRadius.circular(16),
+                      color: _selectedItem==1?Colors.blue:Colors.green.withOpacity(0.5)
                     ),
-                    child: const Center(child: Image(image: AssetImage('assets/images/img_1.png'),width: 60,height: 50,)),
+                    child: const Center(child: Image(image: AssetImage('assets/images/logos/img.png'),width: 60,height: 50,)),
                   ),
                 ),
               ],

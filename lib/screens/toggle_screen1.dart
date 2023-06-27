@@ -11,9 +11,8 @@ class ToggleScreen1 extends StatefulWidget {
 class _ToggleScreen1State extends State<ToggleScreen1> {
   var val = false;
   List<String> _images = [
-    'assets/images/img_5.png',
+    'assets/images/img_7.png',
     'assets/images/img_2.png',
-    'assets/images/img_6.png',
     'assets/images/img_4.png'
     // Add more image paths as needed
   ];
@@ -118,7 +117,7 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
               )
           ),
           Container(
-            height: 80,
+            height: 90,
             padding: EdgeInsets.all(10),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -128,11 +127,12 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.currency_rupee),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
                         Text('Supercoins')
                       ],
@@ -141,94 +141,115 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.branding_watermark),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('NextGen Brands')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.credit_card),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('credit')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.live_tv),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('LiveShop+')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.price_change_outlined),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('EMI')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.cast_for_education),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('Students club')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.cast_for_education),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('Students club')
+                        Text('Supercoins')
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.white10,
-                          child: Icon(Icons.cast_for_education),
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
                         ),
-                        Text('Students club')
+                        Text('Supercoins')
                       ],
                     ),
-                  )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: const [
+                        CircleAvatar(
+                          radius: 15,
+                          backgroundColor: Colors.blueGrey,
+                          child: Icon(Icons.currency_rupee,color: Colors.greenAccent,size: 16,),
+                        ),
+                        Text('Supercoins')
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -309,15 +330,16 @@ class _ToggleScreen1State extends State<ToggleScreen1> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Discount for you',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.black),),
-                      CircleAvatar(
-                        radius: 10,
-                        backgroundColor: Colors.deepPurple,
-                        child: Center(
-                            child: IconButton(
-                              icon: Icon(Icons.arrow_forward_ios,color: Colors.white,size: 12,),
-                              onPressed: () {  },
-                            )
+                      const Text('Discount for you',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.black),),
+                      Container(
+                        width: 20,
+                        height: 20,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: Colors.purple
+                        ),
+                        child: const Center(
+                          child: Icon(Icons.arrow_forward_ios,color: Colors.white,size: 14,),
                         ),
                       )
                     ],
