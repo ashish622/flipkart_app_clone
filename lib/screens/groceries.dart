@@ -1,25 +1,26 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class ToggleScreen2 extends StatefulWidget {
-  const ToggleScreen2({Key? key}) : super(key: key);
+class GroceryScreen extends StatefulWidget {
+  const GroceryScreen({Key? key}) : super(key: key);
 
   @override
-  State<ToggleScreen2> createState() => _ToggleScreen2State();
+  State<GroceryScreen> createState() => _GroceryScreenState();
 }
 
-class _ToggleScreen2State extends State<ToggleScreen2> {
+class _GroceryScreenState extends State<GroceryScreen> {
   var val = false;
   final List<String> _images = [
     'assets/images/product/img_7.png',
     'assets/images/product/img_8.png',
     'assets/images/product/img_9.png',
     'assets/images/product/img_10.png',
+    'assets/images/product/img_14.png',
   ];
   final PageController _pageController = PageController();
   int _currentPage = 0;
   void _startAutoScroll() {
-    Future.delayed(Duration(seconds: 3)).then((_) {
+    Future.delayed(const Duration(seconds: 3)).then((_) {
       if (_currentPage < _images.length - 1) {
         _currentPage++;
       } else {
@@ -27,7 +28,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
       }
       _pageController.animateToPage(
         _currentPage,
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOut,
       );
       _startAutoScroll();
@@ -67,17 +68,17 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   labelText: 'search for products',
                   disabledBorder: InputBorder.none,
                   border: InputBorder.none,
-                  prefixIcon: Icon(Icons.search_outlined,color: Colors.black26,size: 20,),
+                  prefixIcon: const Icon(Icons.search_outlined,color: Colors.black26,size: 20,),
                   suffixIcon: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       IconButton(
                         onPressed: (){},
-                        icon: Icon(Icons.checklist,color: Colors.black54,size: 20,),
+                        icon: const Icon(Icons.checklist,color: Colors.black54,size: 20,),
                       ),
                       IconButton(
                         onPressed: (){},
-                        icon: Icon(Icons.mic,color: Colors.black54,size: 20,),
+                        icon: const Icon(Icons.mic,color: Colors.black54,size: 20,),
                       )
                     ],
                   )
@@ -99,7 +100,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   width: double.infinity,
                   height: 55,
                   color: Colors.transparent,
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -113,7 +114,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                         ),
                         child: TextButton(
                           onPressed: (){},
-                          child: Text('Change',style: TextStyle(color: Colors.blue),),
+                          child: const Text('Change',style: TextStyle(color: Colors.blue),),
                         ),
                       )
                     ],
@@ -124,7 +125,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                 Container(
                   width: double.infinity,
                   height: 35,
-                  padding: EdgeInsets.fromLTRB(10, 8, 10, 8),
+                  padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
                   color: Colors.yellow.withOpacity(0.3),
                   child: const Text('Earliest delivery slot by',
                       style: TextStyle(
@@ -379,8 +380,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                     child: CarouselSlider.builder(
                       options: CarouselOptions(
                           autoPlay: true,
-                          autoPlayInterval: Duration(seconds: 3),
-                          autoPlayAnimationDuration: Duration(milliseconds: 800),
+                          autoPlayInterval: const Duration(seconds: 3),
+                          autoPlayAnimationDuration: const Duration(milliseconds: 800),
                           enableInfiniteScroll: true,
                           viewportFraction: 1
                       ),
@@ -419,7 +420,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 width: double.infinity,
                                 height: 70,
                                 child: Image(
-                                  image: AssetImage('assets/images/product/img_11.png'),
+                                  image: AssetImage('assets/images/product/img_15.png'),
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -443,7 +444,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 width: double.infinity,
                                 height: 70,
                                 child: Image(
-                                  image: AssetImage('assets/images/product/img_12.png'),
+                                  image: AssetImage('assets/images/product/img_15.png'),
                                   fit: BoxFit.cover,),
                               ),
                               Text('Handpicked Deals',style: TextStyle(fontSize: 12,),),
@@ -466,7 +467,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 width: double.infinity,
                                 height: 70,
                                 child: Image(
-                                  image: AssetImage('assets/images/product/img_13.png'),
+                                  image: AssetImage('assets/images/product/img_15.png'),
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -485,7 +486,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   width: MediaQuery.of(context).size.width,
                   height: 450,
                   decoration: BoxDecoration(
-                      color: Colors.cyanAccent
+                      color: Colors.greenAccent.withOpacity(0.4)
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -525,10 +526,10 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                   height: 40,
                                   width: 50,
                                   padding: const EdgeInsets.all(8),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white
                                   ),
-                                  child: Column(
+                                  child: const Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
@@ -542,10 +543,10 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                   height: 40,
                                   width: 50,
                                   padding: const EdgeInsets.all(8),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white
                                   ),
-                                  child: Column(
+                                  child: const Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
@@ -560,16 +561,17 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                   height: 40,
                                   width: 50,
                                   padding: const EdgeInsets.all(8),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white
                                   ),
-                                  child: Column(
+                                  child: const Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
                                       Image(image: AssetImage('assets/images/img_5.png'),),
                                       Text('Women\'s Clothing'),
-                                      Text('Latest Design & trends',style: TextStyle(color: Colors.green),),
+                                      Text('Latest Design & trends',
+                                        style: TextStyle(color: Colors.green),),
 
                                     ],
                                   )
@@ -578,16 +580,18 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                   height: 40,
                                   width: 50,
                                   padding: const EdgeInsets.all(8),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white
                                   ),
-                                  child: Column(
+                                  child: const Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
-                                      Image(image: AssetImage('assets/images/img_6.png')),
-                                      Text('Aplianes'),
-                                      Text('Great deals on aplianes',style: TextStyle(color: Colors.green),),
+                                      Image(
+                                          image: AssetImage('assets/images/img_6.png')),
+                                      Text('Appliances'),
+                                      Text('Great deals on appliances',
+                                        style: TextStyle(color: Colors.green),),
                                     ],
                                   )
                               ),
@@ -609,8 +613,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: const BoxDecoration(
                       color: Colors.white,
                       border: Border(
                         bottom: BorderSide(
@@ -630,8 +634,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: Column(
-                            children: const [
+                          child: const Column(
+                            children: [
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
@@ -652,8 +656,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: Column(
-                            children: const [
+                          child: const Column(
+                            children: [
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
@@ -674,8 +678,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: Column(
-                            children: const [
+                          child: const Column(
+                            children: [
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
@@ -693,8 +697,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: const BoxDecoration(
                       color: Colors.white,
                       border: Border(
                         bottom: BorderSide(
@@ -714,8 +718,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: Column(
-                            children: const [
+                          child: const Column(
+                            children: [
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
@@ -736,15 +740,15 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: Column(
-                            children: const [
+                          child: const Column(
+                            children: [
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
                                 child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
                               ),
                               Text('Paintings',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                              Text('Upto 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
                               Text('Big Discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
@@ -758,8 +762,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: Column(
-                            children: const [
+                          child: const Column(
+                            children: [
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
@@ -782,7 +786,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
+                      const Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -798,7 +802,7 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                           ),
                           width: 20,
                           height: 20,
-                          child: Icon(Icons.arrow_forward_ios,color: Colors.white,size: 16,),
+                          child: const Icon(Icons.arrow_forward_ios,color: Colors.white,size: 16,),
                         ),
                         onTap: (){
 
@@ -809,8 +813,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Column(
@@ -828,8 +832,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
@@ -853,8 +857,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
@@ -878,8 +882,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
@@ -908,8 +912,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
@@ -933,8 +937,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
@@ -958,15 +962,15 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
                                       child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
                                     ),
                                     Text('Artificial Plants',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                    Text('Upto 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                    Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
                                     Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                                   ],
                                 ),
@@ -982,14 +986,14 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                 // Featured Collection
                 Container(
                   height: 230,
-                  color: Colors.green,
+                  color: Colors.greenAccent.withOpacity(0.6),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: const Text('Featured on FLipkart',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white)),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Featured on FLipkart',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white)),
                       ),
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
@@ -1006,8 +1010,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
@@ -1032,8 +1036,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
@@ -1058,8 +1062,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
@@ -1084,8 +1088,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
@@ -1110,8 +1114,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
@@ -1136,8 +1140,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
@@ -1162,8 +1166,8 @@ class _ToggleScreen2State extends State<ToggleScreen2> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,

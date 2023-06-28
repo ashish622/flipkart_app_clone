@@ -1,7 +1,5 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flipkart_home/screens/toggle_screen1.dart';
-import 'package:flipkart_home/screens/toggle_screen2.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flipkart_home/screens/flipkart.dart';
+import 'package:flipkart_home/screens/groceries.dart';
 import 'package:flutter/material.dart';
 
 
@@ -46,7 +44,7 @@ class _HomepageState extends State<Homepage> {
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.45,
                     height: 60,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
                         color: _selectedItem==0?Colors.blue:Colors.blue.withOpacity(0.4)
@@ -69,7 +67,7 @@ class _HomepageState extends State<Homepage> {
               ],
             ),
           ),
-          Expanded(child: _selectedItem==0?ToggleScreen1():ToggleScreen2())
+          Expanded(child: _selectedItem==0?const FlipkartScreen():const GroceryScreen())
         ],
       ),
     );

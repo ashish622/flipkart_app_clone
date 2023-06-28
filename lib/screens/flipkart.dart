@@ -1,14 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class ToggleScreen1 extends StatefulWidget {
-  const ToggleScreen1({Key? key}) : super(key: key);
+class FlipkartScreen extends StatefulWidget {
+  const FlipkartScreen({Key? key}) : super(key: key);
 
   @override
-  State<ToggleScreen1> createState() => _ToggleScreen1State();
+  State<FlipkartScreen> createState() => _FlipkartScreenState();
 }
 
-class _ToggleScreen1State extends State<ToggleScreen1> {
+class _FlipkartScreenState extends State<FlipkartScreen> {
   var val = false;
   final List<String> _images = [
     'assets/images/product/img_5.png',
