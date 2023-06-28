@@ -139,7 +139,7 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                 Container(
                   height: 100,
                   padding: const EdgeInsets.all(10),
-                  child: const SingleChildScrollView(
+                  child:  SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -304,8 +304,8 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
-                            children: [
+                          child: Column(
+                            children: const [
                               SizedBox(
                                 width: double.infinity,
                                 height: 70,
@@ -325,8 +325,8 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
-                            children: [
+                          child:  Column(
+                            children: const [
                               SizedBox(
                                 width: double.infinity,
                                 height: 70,
@@ -346,8 +346,8 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
-                            children: [
+                          child: Column(
+                            children: const [
                               SizedBox(
                                 width: double.infinity,
                                 height: 70,

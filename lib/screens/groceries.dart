@@ -442,7 +442,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
+                          child: Column(
                             children: [
                               SizedBox(
                                 width: double.infinity,
@@ -466,7 +466,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
+                          child:  Column(
                             children: [
                               SizedBox(
                                 width: double.infinity,
@@ -489,7 +489,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
+                          child:  Column(
                             children: [
                               SizedBox(
                                 width: double.infinity,
@@ -557,7 +557,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                   decoration: const BoxDecoration(
                                       color: Colors.white
                                   ),
-                                  child: const Column(
+                                  child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
@@ -575,7 +575,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                   decoration: const BoxDecoration(
                                       color: Colors.white
                                   ),
-                                  child: const Column(
+                                  child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
@@ -593,7 +593,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                   decoration: const BoxDecoration(
                                       color: Colors.white
                                   ),
-                                  child: const Column(
+                                  child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
@@ -611,7 +611,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                   decoration: const BoxDecoration(
                                       color: Colors.white
                                   ),
-                                  child: const Column(
+                                  child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
@@ -661,7 +661,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
+                          child:  Column(
                             children: [
                               SizedBox(
                                 width: double.infinity,
@@ -685,7 +685,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
+                          child: Column(
                             children: [
                               SizedBox(
                                 width: double.infinity,
@@ -707,7 +707,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
+                          child: Column(
                             children: [
                               SizedBox(
                                 width: double.infinity,
@@ -750,7 +750,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
+                          child: Column(
                             children: [
                               SizedBox(
                                 width: double.infinity,
@@ -774,7 +774,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
+                          child: Column(
                             children: [
                               SizedBox(
                                 width: double.infinity,
@@ -796,7 +796,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(width: 1,color: Colors.black12)
                           ),
-                          child: const Column(
+                          child: Column(
                             children: [
                               SizedBox(
                                 width: double.infinity,
@@ -823,7 +823,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Column(
+                      Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -869,7 +869,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: const Column(
+                                child: Column(
                                   children: [
                                     SizedBox(
                                       width: double.infinity,
@@ -896,7 +896,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: const Column(
+                                child: Column(
                                   children: [
                                     SizedBox(
                                       width: double.infinity,
@@ -923,7 +923,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: const Column(
+                                child: Column(
                                   children: [
                                     SizedBox(
                                       width: double.infinity,
@@ -953,7 +953,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: const Column(
+                                child: Column(
                                   children: [
                                     SizedBox(
                                       width: double.infinity,
@@ -980,7 +980,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: const Column(
+                                child: Column(
                                   children: [
                                     SizedBox(
                                       width: double.infinity,
@@ -1007,7 +1007,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: const Column(
+                                child: Column(
                                   children: [
                                     SizedBox(
                                       width: double.infinity,
@@ -1061,7 +1061,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                             decoration: const BoxDecoration(
                                 color: Colors.white
                             ),
-                            child: const Column(
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
@@ -1079,7 +1079,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                             decoration: const BoxDecoration(
                                 color: Colors.white
                             ),
-                            child: const Column(
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
@@ -1097,7 +1097,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                             decoration: const BoxDecoration(
                                 color: Colors.white
                             ),
-                            child: const Column(
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
@@ -1115,7 +1115,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                             decoration: const BoxDecoration(
                                 color: Colors.white
                             ),
-                            child: const Column(
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
@@ -1160,7 +1160,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                       border: Border.all(width: 2,color: Colors.white),
                                       color: Colors.white,
                                     ),
-                                    child: const Column(
+                                    child: Column(
                                       children: [
                                         SizedBox(
                                           width: double.infinity,
@@ -1186,7 +1186,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                       border: Border.all(width: 2,color: Colors.white),
                                       color: Colors.white,
                                     ),
-                                    child: const Column(
+                                    child: Column(
                                       children: [
                                         SizedBox(
                                           width: double.infinity,
@@ -1212,7 +1212,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                       border: Border.all(width: 2,color: Colors.white),
                                       color: Colors.white,
                                     ),
-                                    child: const Column(
+                                    child: Column(
                                       children: [
                                         SizedBox(
                                           width: double.infinity,
@@ -1238,7 +1238,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                       border: Border.all(width: 2,color: Colors.white),
                                       color: Colors.white,
                                     ),
-                                    child: const Column(
+                                    child: Column(
                                       children: [
                                         SizedBox(
                                           width: double.infinity,
@@ -1264,7 +1264,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                       border: Border.all(width: 2,color: Colors.white),
                                       color: Colors.white,
                                     ),
-                                    child: const Column(
+                                    child: Column(
                                       children: [
                                         SizedBox(
                                           width: double.infinity,
@@ -1290,7 +1290,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                       border: Border.all(width: 2,color: Colors.white),
                                       color: Colors.white,
                                     ),
-                                    child: const Column(
+                                    child: Column(
                                       children: [
                                         SizedBox(
                                           width: double.infinity,
@@ -1316,7 +1316,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                       border: Border.all(width: 2,color: Colors.white),
                                       color: Colors.white,
                                     ),
-                                    child: const Column(
+                                    child: Column(
                                       children: [
                                         SizedBox(
                                           width: double.infinity,
@@ -1342,7 +1342,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                       border: Border.all(width: 2,color: Colors.white),
                                       color: Colors.white,
                                     ),
-                                    child: const Column(
+                                    child: Column(
                                       children: [
                                         SizedBox(
                                           width: double.infinity,
