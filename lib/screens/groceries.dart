@@ -68,7 +68,9 @@ class _GroceryScreenState extends State<GroceryScreen> {
                   labelText: 'search for products',
                   disabledBorder: InputBorder.none,
                   border: InputBorder.none,
-                  prefixIcon: const Icon(Icons.search_outlined,color: Colors.black26,size: 20,),
+                  prefixIcon: const Icon(
+                    Icons.search_outlined,color: Colors.black26,size: 20,
+                  ),
                   suffixIcon: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -96,28 +98,54 @@ class _GroceryScreenState extends State<GroceryScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children:[
                 // Delivery Location
-                Container(
-                  width: double.infinity,
-                  height: 55,
-                  color: Colors.transparent,
-                  padding: const EdgeInsets.all(10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Icon(Icons.location_on,color: Colors.blue,size: 20,),
-                      const Text('Delivery to PinCode 226028, Lucknow'),
-                      Container(
-                        width: 70,
-                        height: 35,
-                        decoration: BoxDecoration(
-                          border: Border.all(width: 1,color: Colors.black12)
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: double.infinity,
+                    height: 55,
+                    color: Colors.transparent,
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            const Icon(Icons.location_on,color: Colors.blue,size: 30,),
+                            RichText(
+                              text: const TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: '  Deliver to pincode  ',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    )
+                                  ),
+                                  TextSpan(
+                                    text: '226028, Lucknow',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                    )
+                                  )
+                                ]
+                              ),
+                            ),
+                          ],
                         ),
-                        child: TextButton(
-                          onPressed: (){},
-                          child: const Text('Change',style: TextStyle(color: Colors.blue),),
-                        ),
-                      )
-                    ],
+
+                        Container(
+                          width: 70,
+                          height: 35,
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 1,color: Colors.black12)
+                          ),
+                          child: TextButton(
+                            onPressed: (){},
+                            child: const Text('Change',style: TextStyle(color: Colors.blue),),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
 
@@ -513,7 +541,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                           ],
                         ),
                         SizedBox(
-                          height: 390,
+                          height: 400,
                           width: double.infinity,
                           child: GridView.count(
                             primary: false,
@@ -533,46 +561,10 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
-                                      Image(image: AssetImage('assets/images/img_2.png'),),
-                                      Text('Electronic Gadgets'),
-                                      Text('Upto 10% off',style: TextStyle(color: Colors.green),),
-                                    ],
-                                  )
-                              ),
-                              Container(
-                                  height: 40,
-                                  width: 50,
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: const BoxDecoration(
-                                      color: Colors.white
-                                  ),
-                                  child: const Column(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Image(image: AssetImage('assets/images/img_4.png'),),
-                                      Text('Clothing'),
-                                      Text('Under ₹599',style: TextStyle(color: Colors.green),)
-
-                                    ],
-                                  )
-                              ),
-                              Container(
-                                  height: 40,
-                                  width: 50,
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: const BoxDecoration(
-                                      color: Colors.white
-                                  ),
-                                  child: const Column(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Image(image: AssetImage('assets/images/img_5.png'),),
-                                      Text('Women\'s Clothing'),
-                                      Text('Latest Design & trends',
+                                      Image(image: AssetImage('assets/images/img_11.png')),
+                                      Text('Cereals'),
+                                      Text('Best Deals on cereals',
                                         style: TextStyle(color: Colors.green),),
-
                                     ],
                                   )
                               ),
@@ -587,10 +579,45 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
-                                      Image(
-                                          image: AssetImage('assets/images/img_6.png')),
-                                      Text('Appliances'),
-                                      Text('Great deals on appliances',
+                                      Image(image: AssetImage('assets/images/img_11.png')),
+                                      Text('Cereals'),
+                                      Text('Best Deals on cereals',
+                                        style: TextStyle(color: Colors.green),),
+                                    ],
+                                  )
+                              ),
+                              Container(
+                                  height: 40,
+                                  width: 50,
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: const BoxDecoration(
+                                      color: Colors.white
+                                  ),
+                                  child: const Column(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Image(image: AssetImage('assets/images/img_11.png')),
+                                      Text('Cereals'),
+                                      Text('Best Deals on cereals',
+                                        style: TextStyle(color: Colors.green),),
+                                    ],
+                                  )
+                              ),
+                              Container(
+                                  height: 40,
+                                  width: 50,
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: const BoxDecoration(
+                                      color: Colors.white
+                                  ),
+                                  child: const Column(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Image(image: AssetImage('assets/images/img_11.png')),
+                                      Text('Cereals'),
+                                      Text('Best Deals on cereals',
                                         style: TextStyle(color: Colors.green),),
                                     ],
                                   )
@@ -639,9 +666,11 @@ class _GroceryScreenState extends State<GroceryScreen> {
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
-                                child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                child: Image(
+                                  image: AssetImage('assets/images/img_12.png'),
+                                  fit: BoxFit.cover,),
                               ),
-                              Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('Tea and Beverages',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
                               Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
                               Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
@@ -661,11 +690,11 @@ class _GroceryScreenState extends State<GroceryScreen> {
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
-                                child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
+                                child: Image(image: AssetImage('assets/images/img_13.png'),fit: BoxFit.cover,),
                               ),
-                              Text('Paintings',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                              Text('Upto 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Big Discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                              Text('Snacks & Biscuit',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Limited time Offer',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
                         ),
@@ -683,10 +712,13 @@ class _GroceryScreenState extends State<GroceryScreen> {
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
-                                child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
+                                child: Image(
+                                  image: AssetImage('assets/images/img_14.png'),
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              Text('Artificial Plants',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                              Text('Upto 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Oral Care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
                               Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
@@ -723,9 +755,11 @@ class _GroceryScreenState extends State<GroceryScreen> {
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
-                                child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                child: Image(
+                                  image: AssetImage('assets/images/img_12.png'),
+                                  fit: BoxFit.cover,),
                               ),
-                              Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('Tea and Beverages',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
                               Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
                               Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
@@ -745,11 +779,11 @@ class _GroceryScreenState extends State<GroceryScreen> {
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
-                                child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
+                                child: Image(image: AssetImage('assets/images/img_13.png'),fit: BoxFit.cover,),
                               ),
-                              Text('Paintings',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('Snacks & Biscuit',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
                               Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Big Discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                              Text('Limited time Offer',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
                         ),
@@ -767,10 +801,13 @@ class _GroceryScreenState extends State<GroceryScreen> {
                               SizedBox(
                                 width: double.infinity,
                                 height: 120,
-                                child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
+                                child: Image(
+                                  image: AssetImage('assets/images/img_14.png'),
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              Text('Artificial Plants',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                              Text('Upto 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                              Text('Oral Care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                              Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
                               Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                             ],
                           ),
@@ -827,8 +864,8 @@ class _GroceryScreenState extends State<GroceryScreen> {
                             child: InkWell(
                               onTap: (){},
                               child: Container(
-                                width: MediaQuery.of(context).size.width*0.27,
-                                height: 180,
+                                width: MediaQuery.of(context).size.width*0.28,
+                                height: 195,
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
@@ -837,9 +874,11 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
-                                      child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                      child: Image(
+                                        image: AssetImage('assets/images/img_12.png'),
+                                        fit: BoxFit.cover,),
                                     ),
-                                    Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                    Text('Tea and Beverages',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
                                     Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
                                     Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                                   ],
@@ -852,8 +891,8 @@ class _GroceryScreenState extends State<GroceryScreen> {
                             child: InkWell(
                               onTap: (){},
                               child: Container(
-                                width: MediaQuery.of(context).size.width*0.27,
-                                height: 180,
+                                width: MediaQuery.of(context).size.width*0.28,
+                                height: 195,
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
@@ -862,11 +901,13 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
-                                      child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
+                                      child: Image(
+                                        image: AssetImage('assets/images/img_13.png'),
+                                        fit: BoxFit.cover,),
                                     ),
-                                    Text('Paintings',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                    Text('Upto 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                    Text('Big Discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                    Text('snacks & Biscuits',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                    Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                    Text('Limited time offer',style: TextStyle(fontSize: 12,color: Colors.black26),),
                                   ],
                                 ),
                               ),
@@ -877,8 +918,8 @@ class _GroceryScreenState extends State<GroceryScreen> {
                             child: InkWell(
                               onTap: (){},
                               child: Container(
-                                width: MediaQuery.of(context).size.width*0.27,
-                                height: 180,
+                                width: MediaQuery.of(context).size.width*0.28,
+                                height: 195,
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
@@ -887,10 +928,10 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
-                                      child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
+                                      child: Image(image: AssetImage('assets/images/img_14.png'),fit: BoxFit.cover,),
                                     ),
-                                    Text('Artificial Plants',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                    Text('Upto 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                    Text('Oral care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                    Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
                                     Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                                   ],
                                 ),
@@ -907,8 +948,8 @@ class _GroceryScreenState extends State<GroceryScreen> {
                             child: InkWell(
                               onTap: (){},
                               child: Container(
-                                width: MediaQuery.of(context).size.width*0.27,
-                                height: 180,
+                                width: MediaQuery.of(context).size.width*0.28,
+                                height: 195,
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
@@ -917,9 +958,11 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
-                                      child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                      child: Image(
+                                        image: AssetImage('assets/images/img_12.png'),
+                                        fit: BoxFit.cover,),
                                     ),
-                                    Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                    Text('Tea and Beverages',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
                                     Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
                                     Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                                   ],
@@ -932,8 +975,8 @@ class _GroceryScreenState extends State<GroceryScreen> {
                             child: InkWell(
                               onTap: (){},
                               child: Container(
-                                width: MediaQuery.of(context).size.width*0.27,
-                                height: 180,
+                                width: MediaQuery.of(context).size.width*0.28,
+                                height: 195,
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
@@ -942,11 +985,13 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
-                                      child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
+                                      child: Image(
+                                        image: AssetImage('assets/images/img_13.png'),
+                                        fit: BoxFit.cover,),
                                     ),
-                                    Text('Paintings',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                    Text('Upto 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                    Text('Big Discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                    Text('snacks & Biscuits',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                    Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                    Text('Limited time offer',style: TextStyle(fontSize: 12,color: Colors.black26),),
                                   ],
                                 ),
                               ),
@@ -957,8 +1002,8 @@ class _GroceryScreenState extends State<GroceryScreen> {
                             child: InkWell(
                               onTap: (){},
                               child: Container(
-                                width: MediaQuery.of(context).size.width*0.27,
-                                height: 180,
+                                width: MediaQuery.of(context).size.width*0.28,
+                                height: 195,
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
@@ -967,9 +1012,9 @@ class _GroceryScreenState extends State<GroceryScreen> {
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
-                                      child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
+                                      child: Image(image: AssetImage('assets/images/img_14.png'),fit: BoxFit.cover,),
                                     ),
-                                    Text('Artificial Plants',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                    Text('Oral care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
                                     Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
                                     Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                                   ],
@@ -993,195 +1038,224 @@ class _GroceryScreenState extends State<GroceryScreen> {
                     children: [
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('Featured on FLipkart',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white)),
+                        child: Text('Featured on Flipkart',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white)),
                       ),
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
-                              child: InkWell(
-                                onTap: (){},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width*0.27,
-                                  height: 180,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(width: 2,color: Colors.white),
-                                    color: Colors.white,
-                                  ),
-                                  child: const Column(
-                                    children: [
-                                      SizedBox(
-                                        width: double.infinity,
-                                        height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
-                                      ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
-                              child: InkWell(
-                                onTap: (){},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width*0.27,
-                                  height: 180,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(width: 2,color: Colors.white),
-                                    color: Colors.white,
-                                  ),
-                                  child: const Column(
-                                    children: [
-                                      SizedBox(
-                                        width: double.infinity,
-                                        height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
-                                      ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                                    ],
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(8, 0, 10, 0),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width*0.27,
+                                    height: 180,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2,color: Colors.white),
+                                      color: Colors.white,
+                                    ),
+                                    child: const Column(
+                                      children: [
+                                        SizedBox(
+                                          width: double.infinity,
+                                          height: 130,
+                                          child: Image(image: AssetImage('assets/images/img_11.png'),fit: BoxFit.cover,),
+                                        ),
+                                        Text('Cereals',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                        Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                        Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
-                              child: InkWell(
-                                onTap: (){},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width*0.27,
-                                  height: 180,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(width: 2,color: Colors.white),
-                                    color: Colors.white,
-                                  ),
-                                  child: const Column(
-                                    children: [
-                                      SizedBox(
-                                        width: double.infinity,
-                                        height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
-                                      ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
-                              child: InkWell(
-                                onTap: (){},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width*0.27,
-                                  height: 180,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(width: 2,color: Colors.white),
-                                    color: Colors.white,
-                                  ),
-                                  child: const Column(
-                                    children: [
-                                      SizedBox(
-                                        width: double.infinity,
-                                        height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
-                                      ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                                    ],
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width*0.27,
+                                    height: 180,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2,color: Colors.white),
+                                      color: Colors.white,
+                                    ),
+                                    child: const Column(
+                                      children: [
+                                        SizedBox(
+                                          width: double.infinity,
+                                          height: 130,
+                                          child: Image(image: AssetImage('assets/images/img_15.png'),fit: BoxFit.cover,),
+                                        ),
+                                        Text('Hair Care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                        Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                        Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
-                              child: InkWell(
-                                onTap: (){},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width*0.27,
-                                  height: 180,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(width: 2,color: Colors.white),
-                                    color: Colors.white,
-                                  ),
-                                  child: const Column(
-                                    children: [
-                                      SizedBox(
-                                        width: double.infinity,
-                                        height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
-                                      ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
-                              child: InkWell(
-                                onTap: (){},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width*0.27,
-                                  height: 180,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(width: 2,color: Colors.white),
-                                    color: Colors.white,
-                                  ),
-                                  child: const Column(
-                                    children: [
-                                      SizedBox(
-                                        width: double.infinity,
-                                        height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
-                                      ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                                    ],
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width*0.27,
+                                    height: 180,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2,color: Colors.white),
+                                      color: Colors.white,
+                                    ),
+                                    child: const Column(
+                                      children: [
+                                        SizedBox(
+                                          width: double.infinity,
+                                          height: 130,
+                                          child: Image(image: AssetImage('assets/images/img_16.png'),fit: BoxFit.cover,),
+                                        ),
+                                        Text('Face & Body wash',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                        Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                        Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
-                              child: InkWell(
-                                onTap: (){},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width*0.27,
-                                  height: 180,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(width: 2,color: Colors.white),
-                                    color: Colors.white,
-                                  ),
-                                  child: const Column(
-                                    children: [
-                                      SizedBox(
-                                        width: double.infinity,
-                                        height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
-                                      ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                                    ],
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width*0.27,
+                                    height: 180,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2,color: Colors.white),
+                                      color: Colors.white,
+                                    ),
+                                    child: const Column(
+                                      children: [
+                                        SizedBox(
+                                          width: double.infinity,
+                                          height: 130,
+                                          child: Image(image: AssetImage('assets/images/img_17.png'),fit: BoxFit.cover,),
+                                        ),
+                                        Text('Repellent products',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                        Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                        Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width*0.27,
+                                    height: 180,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2,color: Colors.white),
+                                      color: Colors.white,
+                                    ),
+                                    child: const Column(
+                                      children: [
+                                        SizedBox(
+                                          width: double.infinity,
+                                          height: 130,
+                                          child: Image(image: AssetImage('assets/images/img_11.png'),fit: BoxFit.cover,),
+                                        ),
+                                        Text('Cereals',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                        Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                        Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width*0.27,
+                                    height: 180,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2,color: Colors.white),
+                                      color: Colors.white,
+                                    ),
+                                    child: const Column(
+                                      children: [
+                                        SizedBox(
+                                          width: double.infinity,
+                                          height: 130,
+                                          child: Image(image: AssetImage('assets/images/img_15.png'),fit: BoxFit.cover,),
+                                        ),
+                                        Text('Hair Care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                        Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                        Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width*0.27,
+                                    height: 180,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2,color: Colors.white),
+                                      color: Colors.white,
+                                    ),
+                                    child: const Column(
+                                      children: [
+                                        SizedBox(
+                                          width: double.infinity,
+                                          height: 130,
+                                          child: Image(image: AssetImage('assets/images/img_16.png'),fit: BoxFit.cover,),
+                                        ),
+                                        Text('Face & Body wash',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                        Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                        Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width*0.27,
+                                    height: 180,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2,color: Colors.white),
+                                      color: Colors.white,
+                                    ),
+                                    child: const Column(
+                                      children: [
+                                        SizedBox(
+                                          width: double.infinity,
+                                          height: 130,
+                                          child: Image(image: AssetImage('assets/images/img_17.png'),fit: BoxFit.cover,),
+                                        ),
+                                        Text('Repellent products',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                        Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                                        Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
