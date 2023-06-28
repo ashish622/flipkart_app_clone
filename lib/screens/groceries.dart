@@ -1040,6 +1040,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                         padding: EdgeInsets.all(8.0),
                         child: Text('Featured on Flipkart',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white)),
                       ),
+                      // Featured Product ScrollView
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Padding(
