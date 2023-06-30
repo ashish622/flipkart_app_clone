@@ -174,7 +174,7 @@ class AccountScreen extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Icon(Icons.note_rounded,color: Colors.blue,),
+                                Icon(Icons.payments_outlined,color: Colors.blue,),
                                 SizedBox(width: 15,),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
