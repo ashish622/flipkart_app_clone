@@ -21,7 +21,7 @@ class _ScrollScreenState extends State<ScrollScreen> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(Duration(seconds: 5), (Timer timer) {
+    _timer = Timer.periodic(const Duration(seconds: 5), (Timer timer) {
       if (_currentPage < widget.images.length) {
         _currentPage++;
       } else {
@@ -55,7 +55,7 @@ class _ScrollScreenState extends State<ScrollScreen> {
               return SizedBox(
                 height: double.infinity,
                 width: double.infinity,
-                child: Image(image: AssetImage(widget.images[index]),fit: BoxFit.cover,),
+                child: Image(image: AssetImage(widget.images[index]),fit: BoxFit.fill,),
               );
             },
           ),

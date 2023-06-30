@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flipkart_home/screens/common/discount_screen.dart';
 import 'package:flipkart_home/screens/common/scroll_screen.dart';
 import 'package:flipkart_home/screens/common/suggested_screen.dart';
@@ -21,11 +20,21 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
     'assets/images/product/img_4.png',
     'assets/images/product/img_6.png',
   ];
+  final List<String> _sponsored = [
+    'assets/images/product/img_12.png',
+    'assets/images/product/img_12.png',
+    'assets/images/product/img_12.png',
+  ];
   final List<String> _products = [
     'assets/images/product/img_12.png',
     'assets/images/product/img_13.png',
     'assets/images/product/img_16.png'
   ];
+  final Map<String, String> discountedProducts = {
+    'SmartPhones': 'assets/images/img_11.png',
+    'SmartPhone': 'assets/images/img_11.png',
+    'iPhones': 'assets/images/img_11.png',
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -315,7 +324,7 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                       SizedBox(
                         height: 300,
                         width: MediaQuery.of(context).size.width,
-                        child: const SponsoredProduct(),
+                        child: SponsoredProduct(productImage: _sponsored,),
                       ),
                     ],
                   ),
