@@ -1,5 +1,8 @@
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flipkart_home/screens/common/discount_screen.dart';
+import 'package:flipkart_home/screens/common/suggested_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'common/scroll_screen.dart';
 
 class GroceryScreen extends StatefulWidget {
   const GroceryScreen({Key? key}) : super(key: key);
@@ -17,36 +20,16 @@ class _GroceryScreenState extends State<GroceryScreen> {
     'assets/images/product/img_10.png',
     'assets/images/product/img_14.png',
   ];
-  final PageController _pageController = PageController();
-  int _currentPage = 0;
-  void _startAutoScroll() {
-    Future.delayed(const Duration(seconds: 3)).then((_) {
-      if (_currentPage < _images.length - 1) {
-        _currentPage++;
-      } else {
-        _currentPage = 0;
-      }
-      _pageController.animateToPage(
-        _currentPage,
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.easeInOut,
-      );
-      _startAutoScroll();
-    });
-
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _startAutoScroll();
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
-  }
+  final List<String> _products = [
+    'assets/images/product/img_15.png',
+    'assets/images/product/img_15.png',
+    'assets/images/product/img_15.png'
+  ];
+  final List<String> discountedProducts = [
+    'assets/images/img_11.png',
+    'assets/images/img_11.png',
+    'assets/images/img_11.png'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -405,108 +388,15 @@ class _GroceryScreenState extends State<GroceryScreen> {
                 SizedBox(
                     width: MediaQuery.of(context).size.width,
                     height: 200,
-                    child: CarouselSlider.builder(
-                      options: CarouselOptions(
-                          autoPlay: true,
-                          autoPlayInterval: const Duration(seconds: 3),
-                          autoPlayAnimationDuration: const Duration(milliseconds: 800),
-                          enableInfiniteScroll: true,
-                          viewportFraction: 1
-                      ),
-                      itemCount: _images.length,
-                      itemBuilder: (BuildContext context, int index, int realIndex) {
-                        return Container(
-                          width: double.infinity,
-                          height: 200,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(image: AssetImage(_images[index]),fit: BoxFit.cover)
-                          ),
-                        );
-                      },
-
-                    )
+                    child: ScrollScreen(images: _images,)
                 ),
 
                 // Suggestion and deals
                 Container(
                   width: MediaQuery.of(context).size.width,
+                  height: 120,
                   padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      InkWell(
-                        onTap: (){},
-                        child: Container(
-                          width: MediaQuery.of(context).size.width*0.30,
-                          height: 100,
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1,color: Colors.black12)
-                          ),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 70,
-                                child: Image(
-                                  image: AssetImage('assets/images/product/img_15.png'),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Text('Handpicked Deals',style: TextStyle(fontSize: 12,),),
-                              Text('Just For You',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
-                            ],
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: (){},
-                        child: Container(
-                          width: MediaQuery.of(context).size.width*0.30,
-                          height: 100,
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1,color: Colors.black12)
-                          ),
-                          child:  Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 70,
-                                child: Image(
-                                  image: AssetImage('assets/images/product/img_15.png'),
-                                  fit: BoxFit.cover,),
-                              ),
-                              Text('Handpicked Deals',style: TextStyle(fontSize: 12,),),
-                              Text('Just For You',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
-                            ],
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: (){},
-                        child: Container(
-                          width: MediaQuery.of(context).size.width*0.30,
-                          height: 100,
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1,color: Colors.black12)
-                          ),
-                          child:  Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 70,
-                                child: Image(
-                                  image: AssetImage('assets/images/product/img_15.png'),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Text('Handpicked Deals',style: TextStyle(fontSize: 12,),),
-                              Text('Just For You',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: SuggestedProducts(products: _products,)
                 ),
 
                 //Discounts on products
@@ -543,87 +433,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                         SizedBox(
                           height: 400,
                           width: double.infinity,
-                          child: GridView.count(
-                            primary: false,
-                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 10,
-                            crossAxisCount: 2,
-                            children: <Widget>[
-                              Container(
-                                  height: 40,
-                                  width: 50,
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: const BoxDecoration(
-                                      color: Colors.white
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Image(image: AssetImage('assets/images/img_11.png')),
-                                      Text('Cereals'),
-                                      Text('Best Deals on cereals',
-                                        style: TextStyle(color: Colors.green),),
-                                    ],
-                                  )
-                              ),
-                              Container(
-                                  height: 40,
-                                  width: 50,
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: const BoxDecoration(
-                                      color: Colors.white
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Image(image: AssetImage('assets/images/img_11.png')),
-                                      Text('Cereals'),
-                                      Text('Best Deals on cereals',
-                                        style: TextStyle(color: Colors.green),),
-                                    ],
-                                  )
-                              ),
-                              Container(
-                                  height: 40,
-                                  width: 50,
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: const BoxDecoration(
-                                      color: Colors.white
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Image(image: AssetImage('assets/images/img_11.png')),
-                                      Text('Cereals'),
-                                      Text('Best Deals on cereals',
-                                        style: TextStyle(color: Colors.green),),
-                                    ],
-                                  )
-                              ),
-                              Container(
-                                  height: 40,
-                                  width: 50,
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: const BoxDecoration(
-                                      color: Colors.white
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Image(image: AssetImage('assets/images/img_11.png')),
-                                      Text('Cereals'),
-                                      Text('Best Deals on cereals',
-                                        style: TextStyle(color: Colors.green),),
-                                    ],
-                                  )
-                              ),
-                            ],
-                          ),
+                          child: DiscountProduct(discounted: discountedProducts,)
                         )
                       ],
                     ),
