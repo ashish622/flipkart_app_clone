@@ -1,8 +1,9 @@
+import 'package:flipkart_home/models/product_model.dart';
 import 'package:flutter/material.dart';
 
 class DiscountProduct extends StatefulWidget {
-  final List<String> discounted;
-  const DiscountProduct({Key? key, required this.discounted}) : super(key: key);
+  final List<ProductModel> product;
+  const DiscountProduct({Key? key, required this.product}) : super(key: key);
 
   @override
   State<DiscountProduct> createState() => _DiscountProductState();
@@ -32,14 +33,14 @@ class _DiscountProductState extends State<DiscountProduct> {
                 SizedBox(
                   width: double.infinity,
                   height: 130,
-                  child: Image(image: AssetImage(widget.discounted[0]),fit: BoxFit.cover,),
+                  child: Image(image: AssetImage(widget.product[0].images),fit: BoxFit.cover,),
                 ),
-                const Column(
+                Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text('Cereals'),
-                    Text('Best Deals on cereals',
-                      style: TextStyle(color: Colors.green),),
+                    Text(widget.product[0].name),
+                    Text(widget.product[0].details,
+                      style: const TextStyle(color: Colors.green),),
                   ],
                 )
               ],
@@ -59,14 +60,14 @@ class _DiscountProductState extends State<DiscountProduct> {
                 SizedBox(
                   width: double.infinity,
                   height: 130,
-                  child: Image(image: AssetImage(widget.discounted[0]),fit: BoxFit.cover,),
+                  child: Image(image: AssetImage(widget.product[1].images),fit: BoxFit.cover,),
                 ),
-                const Column(
+                Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text('Cereals'),
-                    Text('Best Deals on cereals',
-                      style: TextStyle(color: Colors.green),),
+                    Text(widget.product[1].name),
+                    Text(widget.product[1].details,
+                      style: const TextStyle(color: Colors.green),),
                   ],
                 )
               ],
@@ -86,14 +87,14 @@ class _DiscountProductState extends State<DiscountProduct> {
                 SizedBox(
                   width: double.infinity,
                   height: 130,
-                  child: Image(image: AssetImage(widget.discounted[0]),fit: BoxFit.cover,),
+                  child: Image(image: AssetImage(widget.product[1].images),fit: BoxFit.cover,),
                 ),
-                const Column(
+                Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text('Cereals'),
-                    Text('Best Deals on cereals',
-                      style: TextStyle(color: Colors.green),),
+                    Text(widget.product[1].name),
+                    Text(widget.product[1].details,
+                      style: const TextStyle(color: Colors.green),),
                   ],
                 )
               ],
@@ -113,14 +114,14 @@ class _DiscountProductState extends State<DiscountProduct> {
                 SizedBox(
                   width: double.infinity,
                   height: 130,
-                  child: Image(image: AssetImage(widget.discounted[0]),fit: BoxFit.cover,),
+                  child: Image(image: AssetImage(widget.product[2].images),fit: BoxFit.cover,),
                 ),
-                const Column(
+                Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text('Cereals'),
-                    Text('Best Deals on cereals',
-                      style: TextStyle(color: Colors.green),),
+                    Text(widget.product[2].name),
+                    Text(widget.product[2].details,
+                      style: const TextStyle(color: Colors.green),),
                   ],
                 )
               ],

@@ -1,9 +1,11 @@
-import 'package:flipkart_home/screens/common/discount_screen.dart';
-import 'package:flipkart_home/screens/common/scroll_screen.dart';
-import 'package:flipkart_home/screens/common/suggested_screen.dart';
+import 'package:flipkart_home/common/discount_screen.dart';
+import 'package:flipkart_home/common/scroll_screen.dart';
+import 'package:flipkart_home/common/suggested_screen.dart';
+import 'package:flipkart_home/models/product_model.dart';
 import 'package:flutter/material.dart';
 
-import 'common/sponsored_product_screen.dart';
+import '../common/sponsored_product_screen.dart';
+
 
 class FlipkartScreen extends StatefulWidget {
   const FlipkartScreen({Key? key}) : super(key: key);
@@ -29,6 +31,26 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
     'assets/images/product/img_12.png',
     'assets/images/product/img_13.png',
     'assets/images/product/img_16.png'
+  ];
+  List<ProductModel> product =[
+    ProductModel(
+      images: 'assets/images/img_5.png',
+      name: 'fashion',
+      price: 999,
+      details: 'Traditional and Modern',
+    ),
+    ProductModel(
+      images: 'assets/images/img_6.png',
+      name: 'Home Appliances',
+      price: 999,
+      details: 'Best deals today',
+    ),
+    ProductModel(
+      images: 'assets/images/product/img.png',
+      name: 'Head phones',
+      price: 999,
+      details: 'Bigger Discounts',
+    )
   ];
   final Map<String, String> discountedProducts = {
     'SmartPhones': 'assets/images/img_11.png',
@@ -300,7 +322,7 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                         SizedBox(
                           height: 390,
                           width: double.infinity,
-                          child: DiscountProduct(discounted: _products,),
+                          child: DiscountProduct(product: product,),
                         )
                       ],
                     ),

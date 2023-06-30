@@ -1,5 +1,6 @@
 import 'package:flipkart_home/screens/account_screen.dart';
 import 'package:flipkart_home/screens/categories_screen.dart';
+import 'package:flipkart_home/screens/login_screen.dart';
 import 'package:flipkart_home/screens/notification_screen.dart';
 import 'package:flipkart_home/screens/shoping-cart_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,21 +20,22 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
 
   int selectedIndex = 0;
+  int ref = 0;
   List<Widget> pages = [
-    Homepage(),
-    CategoryScreen(),
-    NotificationScreen(),
-    AccountScreen(),
-    ShoppingCartScreen()
+    const Homepage(),
+    const CategoryScreen(),
+    const NotificationScreen(),
+    const AccountScreen(),
+    const ShoppingCartScreen()
   ];
-  PageController _pageController = PageController(initialPage: 0);
+  final PageController _pageController = PageController(initialPage: 0);
 
   void _onTabSelected(int index) {
     setState(() {
       selectedIndex = index;
       _pageController.animateToPage(
         index,
-        duration: Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
     });
@@ -48,11 +50,14 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flipkart Home Screen',
+      routes: {
+        'continue': (context) => const Homepage(),
+      },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
+      home: ref==1?Scaffold(
         body: PageView(
           controller: _pageController,
           onPageChanged: (index) {
@@ -60,7 +65,7 @@ class _MyAppState extends State<MyApp> {
               selectedIndex = index;
             });
           },
-          children: [
+          children: const [
             Homepage(),
             CategoryScreen(),
             NotificationScreen(),
@@ -97,7 +102,7 @@ class _MyAppState extends State<MyApp> {
             ),
           ],
         ),
-      )
+      ):const LoginScreen()
     );
   }
 }

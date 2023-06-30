@@ -1,10 +1,11 @@
 
-import 'package:flipkart_home/screens/common/discount_screen.dart';
-import 'package:flipkart_home/screens/common/sponsored_product_screen.dart';
-import 'package:flipkart_home/screens/common/suggested_screen.dart';
+import 'package:flipkart_home/common/sponsored_product_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'common/scroll_screen.dart';
+import '../common/discount_screen.dart';
+import '../common/scroll_screen.dart';
+import '../common/suggested_screen.dart';
+import '../models/product_model.dart';
 
 class GroceryScreen extends StatefulWidget {
   const GroceryScreen({Key? key}) : super(key: key);
@@ -26,6 +27,26 @@ class _GroceryScreenState extends State<GroceryScreen> {
     'assets/images/img_15.png',
     'assets/images/img_15.png',
     'assets/images/img_15.png'
+  ];
+  List<ProductModel> product =[
+    ProductModel(
+      images: 'assets/images/img_11.png',
+      name: 'Atta',
+      price: 999,
+      details: 'Fresh Deals',
+    ),
+    ProductModel(
+      images: 'assets/images/img_11.png',
+      name: 'Atta',
+      price: 999,
+      details: 'Fresh Deals',
+    ),
+    ProductModel(
+      images: 'assets/images/img_11.png',
+      name: 'Atta',
+      price: 999,
+      details: 'Fresh Deals',
+    ),
   ];
   final List<String> _products = [
     'assets/images/product/img_15.png',
@@ -442,7 +463,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                         SizedBox(
                           height: 400,
                           width: double.infinity,
-                          child: DiscountProduct(discounted: _products,)
+                          child: DiscountProduct(product: product,)
                         )
                       ],
                     ),

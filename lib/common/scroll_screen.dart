@@ -4,7 +4,7 @@ import "package:flutter/material.dart";
 class ScrollScreen extends StatefulWidget {
   final List<String> images;
 
-  ScrollScreen({ required this.images});
+  const ScrollScreen({super.key,  required this.images});
 
   @override
   State<ScrollScreen> createState() => _ScrollScreenState();
