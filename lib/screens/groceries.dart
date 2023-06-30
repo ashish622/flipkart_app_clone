@@ -446,6 +446,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                   height: 350,
                   width: MediaQuery.of(context).size.width,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Padding(
                         padding:  EdgeInsets.fromLTRB(10, 20, 10, 10),
