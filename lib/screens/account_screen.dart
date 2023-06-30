@@ -150,6 +150,7 @@ class AccountScreen extends StatelessWidget {
               ),
               Container(
                 height: 60,
+                color: Colors.white,
                 child: const Row(
                   children: [
                     Icon(Icons.currency_rupee_outlined,color: Colors.blue,)
