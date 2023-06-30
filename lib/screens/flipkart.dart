@@ -100,7 +100,7 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                 //Products Slider
                 SizedBox(
                     width: MediaQuery.of(context).size.width,
-                    height: 200,
+                    height: 185,
                     child: ScrollScreen(images: _images,)
                 ),
 
@@ -536,7 +536,7 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                 // Featured Collection
                 Container(
                   height: 230,
-                  color: Colors.green,
+                  color: Colors.green.withOpacity(0.7),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,

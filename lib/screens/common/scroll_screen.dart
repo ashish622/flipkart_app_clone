@@ -38,7 +38,7 @@ class _ScrollScreenState extends State<ScrollScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Stack(
       children: [
         SizedBox(
           height: 180,
@@ -60,24 +60,37 @@ class _ScrollScreenState extends State<ScrollScreen> {
             },
           ),
         ),
-        const SizedBox(height: 7,),
-        Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: indicators(widget.images.length,currentIndex))
+        Positioned(
+          bottom: 20,
+          right: MediaQuery.of(context).size.width*0.30,
+          child: Container(
+            height: 10,
+            width: 100,
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.circular(16)
+            ),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: indicators(widget.images.length,currentIndex)),
+          ),
+        )
       ]
     );
   }
 }
 List<Widget> indicators(imagesLength,currentIndex) {
   return List<Widget>.generate(imagesLength, (index) {
-    return Container(
-      margin: const EdgeInsets.all(3),
-      width: 30,
-      height: 6,
+    return currentIndex == index ? Container(
+      height: 10,
+      width: 20,
       decoration: BoxDecoration(
-          color: currentIndex == index ? Colors.greenAccent : Colors.black26,
-          borderRadius: BorderRadius.circular(20)
+        borderRadius: BorderRadius.circular(8),
+        color: Colors.white
       ),
+    ): const CircleAvatar(
+      backgroundColor: Colors.grey,
+      radius: 5,
     );
   });
 }
