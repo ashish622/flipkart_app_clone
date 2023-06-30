@@ -1,4 +1,5 @@
 import 'package:flipkart_home/screens/common/discount_screen.dart';
+import 'package:flipkart_home/screens/common/sponsored_product_screen.dart';
 import 'package:flipkart_home/screens/common/suggested_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -441,188 +442,23 @@ class _GroceryScreenState extends State<GroceryScreen> {
                 ),
 
                 //Sponsored products
-                const Padding(
-                  padding:  EdgeInsets.fromLTRB(10, 20, 10, 10),
-                  child:  Text(
-                    'Sponsored Products',
-                    style: TextStyle(color: Colors.black,fontSize: 16,fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Container(
+                SizedBox(
+                  height: 350,
                   width: MediaQuery.of(context).size.width,
-                  padding: const EdgeInsets.all(8.0),
-                  decoration: const BoxDecoration(
-                      color: Colors.white,
-                      border: Border(
-                        bottom: BorderSide(
-                            color: Colors.black,
-                            width: 1.0
-                        ),
-                      )
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  child: Column(
                     children: [
-                      InkWell(
-                        onTap: (){},
-                        child: Container(
-                          width: MediaQuery.of(context).size.width*0.30,
-                          height: 165,
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1,color: Colors.black12)
-                          ),
-                          child:  Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 120,
-                                child: Image(
-                                  image: AssetImage('assets/images/img_12.png'),
-                                  fit: BoxFit.cover,),
-                              ),
-                              Text('Tea and Beverages',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                              Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                            ],
-                          ),
+                      const Padding(
+                        padding:  EdgeInsets.fromLTRB(10, 20, 10, 10),
+                        child:  Text(
+                          'Sponsored Products',
+                          style: TextStyle(color: Colors.black,fontSize: 16,fontWeight: FontWeight.bold),
                         ),
                       ),
-                      InkWell(
-                        onTap: (){},
-                        child: Container(
-                          width: MediaQuery.of(context).size.width*0.30,
-                          height: 165,
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1,color: Colors.black12)
-                          ),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 120,
-                                child: Image(image: AssetImage('assets/images/img_13.png'),fit: BoxFit.cover,),
-                              ),
-                              Text('Snacks & Biscuit',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                              Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Limited time Offer',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                            ],
-                          ),
-                        ),
+                      SizedBox(
+                        height: 300,
+                        width: MediaQuery.of(context).size.width,
+                        child: const SponsoredProduct(),
                       ),
-                      InkWell(
-                        onTap: (){},
-                        child: Container(
-                          width: MediaQuery.of(context).size.width*0.30,
-                          height: 165,
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1,color: Colors.black12)
-                          ),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 120,
-                                child: Image(
-                                  image: AssetImage('assets/images/img_14.png'),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Text('Oral Care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                              Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  padding: const EdgeInsets.all(8.0),
-                  decoration: const BoxDecoration(
-                      color: Colors.white,
-                      border: Border(
-                        bottom: BorderSide(
-                            color: Colors.black,
-                            width: 1.0
-                        ),
-                      )
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      InkWell(
-                        onTap: (){},
-                        child: Container(
-                          width: MediaQuery.of(context).size.width*0.30,
-                          height: 165,
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1,color: Colors.black12)
-                          ),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 120,
-                                child: Image(
-                                  image: AssetImage('assets/images/img_12.png'),
-                                  fit: BoxFit.cover,),
-                              ),
-                              Text('Tea and Beverages',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                              Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                            ],
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: (){},
-                        child: Container(
-                          width: MediaQuery.of(context).size.width*0.30,
-                          height: 165,
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1,color: Colors.black12)
-                          ),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 120,
-                                child: Image(image: AssetImage('assets/images/img_13.png'),fit: BoxFit.cover,),
-                              ),
-                              Text('Snacks & Biscuit',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                              Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Limited time Offer',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                            ],
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: (){},
-                        child: Container(
-                          width: MediaQuery.of(context).size.width*0.30,
-                          height: 165,
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1,color: Colors.black12)
-                          ),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 120,
-                                child: Image(
-                                  image: AssetImage('assets/images/img_14.png'),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Text('Oral Care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                              Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                              Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                            ],
-                          ),
-                        ),
-                      )
                     ],
                   ),
                 ),
