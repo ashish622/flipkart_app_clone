@@ -393,11 +393,13 @@ class _GroceryScreenState extends State<GroceryScreen> {
                 ),
 
                 // Suggestion and deals
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 120,
-                  padding: const EdgeInsets.all(8.0),
-                  child: SuggestedProducts(products: _products,)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(6, 16, 6, 16),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 125,
+                    child: SuggestedProducts(products: _products,)
+                  ),
                 ),
 
                 //Discounts on products
@@ -443,7 +445,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
 
                 //Sponsored products
                 SizedBox(
-                  height: 350,
+                  height: 360,
                   width: MediaQuery.of(context).size.width,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

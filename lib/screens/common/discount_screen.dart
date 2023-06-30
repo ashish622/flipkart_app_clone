@@ -1,87 +1,128 @@
 import 'package:flutter/material.dart';
 
-class DiscountProduct extends StatelessWidget {
+class DiscountProduct extends StatefulWidget {
   final List<String> discounted;
   const DiscountProduct({Key? key, required this.discounted}) : super(key: key);
 
+  @override
+  State<DiscountProduct> createState() => _DiscountProductState();
+}
+
+class _DiscountProductState extends State<DiscountProduct> {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
       primary: false,
       padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
+      crossAxisSpacing: 5,
+      mainAxisSpacing: 5,
       crossAxisCount: 2,
       children: <Widget>[
         Container(
-            height: 40,
-            width: 50,
-            padding: const EdgeInsets.all(8),
+            height: double.infinity,
+            width: MediaQuery.of(context).size.width*0.25,
+            padding: const EdgeInsets.all(1),
             decoration: const BoxDecoration(
                 color: Colors.white
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image(image: AssetImage(discounted[0])),
-                const Text('Cereals'),
-                const Text('Best Deals on cereals',
-                  style: TextStyle(color: Colors.green),),
+                SizedBox(
+                  width: double.infinity,
+                  height: 130,
+                  child: Image(image: AssetImage(widget.discounted[0]),fit: BoxFit.cover,),
+                ),
+                const Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text('Cereals'),
+                    Text('Best Deals on cereals',
+                      style: TextStyle(color: Colors.green),),
+                  ],
+                )
               ],
             )
         ),
         Container(
-            height: 40,
-            width: 50,
-            padding: const EdgeInsets.all(8),
+            height: double.infinity,
+            width: MediaQuery.of(context).size.width*0.25,
+            padding: const EdgeInsets.all(1),
             decoration: const BoxDecoration(
                 color: Colors.white
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image(image: AssetImage(discounted[0])),
-                const Text('Cereals'),
-                const Text('Best Deals on cereals',
-                  style: TextStyle(color: Colors.green),),
+                SizedBox(
+                  width: double.infinity,
+                  height: 130,
+                  child: Image(image: AssetImage(widget.discounted[0]),fit: BoxFit.cover,),
+                ),
+                const Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text('Cereals'),
+                    Text('Best Deals on cereals',
+                      style: TextStyle(color: Colors.green),),
+                  ],
+                )
               ],
             )
         ),
         Container(
-            height: 40,
-            width: 50,
-            padding: const EdgeInsets.all(8),
+            height: double.infinity,
+            width: MediaQuery.of(context).size.width*0.25,
+            padding: const EdgeInsets.all(1),
             decoration: const BoxDecoration(
                 color: Colors.white
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image(image: AssetImage(discounted[0])),
-                const Text('Cereals'),
-                const Text('Best Deals on cereals',
-                  style: TextStyle(color: Colors.green),),
+                SizedBox(
+                  width: double.infinity,
+                  height: 130,
+                  child: Image(image: AssetImage(widget.discounted[0]),fit: BoxFit.cover,),
+                ),
+                const Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text('Cereals'),
+                    Text('Best Deals on cereals',
+                      style: TextStyle(color: Colors.green),),
+                  ],
+                )
               ],
             )
         ),
         Container(
-            height: 40,
-            width: 50,
-            padding: const EdgeInsets.all(8),
+            height: double.infinity,
+            width: MediaQuery.of(context).size.width*0.25,
+            padding: const EdgeInsets.all(1),
             decoration: const BoxDecoration(
                 color: Colors.white
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image(image: AssetImage(discounted[0])),
-                const Text('Cereals'),
-                const Text('Best Deals on cereals',
-                  style: TextStyle(color: Colors.green),),
+                SizedBox(
+                  width: double.infinity,
+                  height: 130,
+                  child: Image(image: AssetImage(widget.discounted[0]),fit: BoxFit.cover,),
+                ),
+                const Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text('Cereals'),
+                    Text('Best Deals on cereals',
+                      style: TextStyle(color: Colors.green),),
+                  ],
+                )
               ],
             )
         ),

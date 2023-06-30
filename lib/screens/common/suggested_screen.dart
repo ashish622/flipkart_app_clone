@@ -13,11 +13,11 @@ class SuggestedProducts extends StatelessWidget {
       itemCount: productLength,
       itemBuilder: (context, index){
         return Padding(
-          padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+          padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
           child: InkWell(
             onTap: (){},
             child: Container(
-              width: MediaQuery.of(context).size.width*0.30,
+              width: MediaQuery.of(context).size.width*0.27,
               height: 100,
               decoration: BoxDecoration(
                   border: Border.all(width: 1,color: Colors.black12)

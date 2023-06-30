@@ -1,177 +1,164 @@
 import 'package:flutter/material.dart';
 
-class SponsoredProduct extends StatelessWidget {
+class SponsoredProduct extends StatefulWidget {
   const SponsoredProduct({Key? key}) : super(key: key);
 
   @override
+  State<SponsoredProduct> createState() => _SponsoredProductState();
+}
+
+class _SponsoredProductState extends State<SponsoredProduct> {
+  final List<String> _products = [
+    'assets/images/img_12.png',
+    'assets/images/img_13.png',
+    'assets/images/img_14.png'
+  ];
+  @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 3,
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            onTap: (){},
+    return SizedBox(
+      height: double.infinity,
+      width: double.infinity,
+      child: GridView.count(
+        crossAxisCount: 3,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8, 0, 4, 4),
             child: Container(
-              width: MediaQuery.of(context).size.width*0.30,
-              height: 165,
               decoration: BoxDecoration(
-                  border: Border.all(width: 1,color: Colors.black12)
+                border: Border.all(width: 1, color: Colors.black12)
               ),
-              child:  const Column(
+              child: Column(
                 children: [
-                  SizedBox(
+                  Container(
                     width: double.infinity,
                     height: 70,
+                    padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
                     child: Image(
-                      image: AssetImage('assets/images/img_12.png'),
-                      fit: BoxFit.cover,),
+                      image: AssetImage(_products[0]),
+                      fit: BoxFit.contain,),
                   ),
-                  Text('Tea and Beverages',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                  Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                  Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                  const Text('Tea and Beverages',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                  const Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                  const Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
                 ],
               ),
             ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            onTap: (){},
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4, 0, 4, 4),
             child: Container(
-              width: MediaQuery.of(context).size.width*0.30,
-              height: 165,
               decoration: BoxDecoration(
-                  border: Border.all(width: 1,color: Colors.black12)
+                border: Border.all(width: 1, color: Colors.black12)
               ),
-              child: const Column(
+              child: Column(
                 children: [
-                  SizedBox(
+                  Container(
                     width: double.infinity,
                     height: 70,
-                    child: Image(image: AssetImage('assets/images/img_13.png'),fit: BoxFit.cover,),
-                  ),
-                  Text('Snacks & Biscuit',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                  Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                  Text('Limited time Offer',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                ],
-              ),
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            onTap: (){},
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: MediaQuery.of(context).size.width*0.30,
-                height: 165,
-                decoration: BoxDecoration(
-                    border: Border.all(width: 1,color: Colors.black12)
-                ),
-                child: const Column(
-                  children: [
-                    SizedBox(
-                      width: double.infinity,
-                      height: 54,
-                      child: Image(
-                        image: AssetImage('assets/images/img_14.png'),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Text('Oral Care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                    Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                    Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            onTap: (){},
-            child: Container(
-              width: MediaQuery.of(context).size.width*0.30,
-              height: 165,
-              decoration: BoxDecoration(
-                  border: Border.all(width: 1,color: Colors.black12)
-              ),
-              child: const Column(
-                children: [
-                  SizedBox(
-                    width: double.infinity,
-                    height: 70,
+                    padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
                     child: Image(
-                      image: AssetImage('assets/images/img_12.png'),
-                      fit: BoxFit.cover,),
-                  ),
-                  Text('Tea and Beverages',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                  Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                  Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                ],
-              ),
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            onTap: (){},
-            child: Container(
-              width: MediaQuery.of(context).size.width*0.30,
-              height: 165,
-              decoration: BoxDecoration(
-                  border: Border.all(width: 1,color: Colors.black12)
-              ),
-              child: const Column(
-                children: [
-                  SizedBox(
-                    width: double.infinity,
-                    height: 70,
-                    child: Image(image: AssetImage('assets/images/img_13.png'),fit: BoxFit.cover,),
-                  ),
-                  Text('Snacks & Biscuit',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                  Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                  Text('Limited time Offer',style: TextStyle(fontSize: 12,color: Colors.black26),),
-                ],
-              ),
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            onTap: (){},
-            child: Container(
-              width: MediaQuery.of(context).size.width*0.30,
-              height: 165,
-              decoration: BoxDecoration(
-                  border: Border.all(width: 1,color: Colors.black12)
-              ),
-              child: const Column(
-                children: [
-                  SizedBox(
-                    width: double.infinity,
-                    height: 70,
-                    child: Image(
-                      image: AssetImage('assets/images/img_14.png'),
-                      fit: BoxFit.cover,
+                      image: AssetImage(_products[1]),
+                      fit: BoxFit.contain,
                     ),
                   ),
-                  Text('Oral Care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                  Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                  Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                  const Text('Oral Care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                  const Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                  const Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
                 ],
               ),
             ),
           ),
-        ),
-      ],
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4, 0, 8, 4),
+            child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(width: 1, color: Colors.black12)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 70,
+                    padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
+                    child: Image(image: AssetImage(_products[2]),fit: BoxFit.contain,),
+                  ),
+                  const Text('Snacks & Biscuit',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                  const Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                  const Text('Limited time Offer',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8, 4, 4, 4),
+            child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(width: 1, color: Colors.black12)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 70,
+                    padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
+                    child: Image(
+                      image: AssetImage(_products[0]),
+                      fit: BoxFit.contain,),
+                  ),
+                  const Text('Tea and Beverages',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                  const Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                  const Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),
+            child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(width: 1, color: Colors.black12)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 70,
+                    padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
+                    child: Image(
+                      image: AssetImage(_products[1]),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                  const Text('Oral Care',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                  const Text('Up to 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                  const Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4, 4, 8, 4),
+            child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(width: 1, color: Colors.black12)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 70,
+                    padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
+                    child: Image(image: AssetImage(_products[2]),fit: BoxFit.contain,),
+                  ),
+                  const Text('Snacks & Biscuit',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                  const Text('Up to 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
+                  const Text('Limited time Offer',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -1,38 +1,83 @@
-import "package:carousel_slider/carousel_slider.dart";
+import "dart:async";
 import "package:flutter/material.dart";
 
-class ScrollScreen extends StatelessWidget {
+class ScrollScreen extends StatefulWidget {
   final List<String> images;
+
   ScrollScreen({ required this.images});
 
-  final PageController _pageController = PageController();
+  @override
+  State<ScrollScreen> createState() => _ScrollScreenState();
+}
+
+class _ScrollScreenState extends State<ScrollScreen> {
+  var currentIndex = 0;
+  late Timer _timer;
+  final PageController _pageController = PageController(
+    initialPage: 0,
+  );
+  int _currentPage = 0;
 
   @override
-  void dispose() {
-    _pageController.dispose();
-    dispose();
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(Duration(seconds: 5), (Timer timer) {
+      if (_currentPage < widget.images.length) {
+        _currentPage++;
+      } else {
+        _currentPage = 0;
+      }
+
+      _pageController.animateToPage(
+        _currentPage,
+        duration: const Duration(milliseconds: 350),
+        curve: Curves.easeIn,
+      );
+    });
   }
+
   @override
   Widget build(BuildContext context) {
-    return CarouselSlider.builder(
-      options: CarouselOptions(
-          autoPlay: true,
-          autoPlayInterval: const Duration(seconds: 3),
-          autoPlayAnimationDuration: const Duration(milliseconds: 800),
-          enableInfiniteScroll: true,
-          viewportFraction: 1
-      ),
-      itemCount: images.length,
-      itemBuilder: (BuildContext context, int index, int realIndex) {
-        return Container(
+    return Column(
+      children: [
+        SizedBox(
+          height: 180,
           width: double.infinity,
-          height: 200,
-          decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage(images[index]),fit: BoxFit.cover)
+          child: PageView.builder(
+            itemCount: widget.images.length,
+            controller: _pageController,
+            onPageChanged: (index){
+              setState(() {
+                currentIndex = index;
+              });
+            },
+            itemBuilder: (context, index){
+              return SizedBox(
+                height: double.infinity,
+                width: double.infinity,
+                child: Image(image: AssetImage(widget.images[index]),fit: BoxFit.cover,),
+              );
+            },
           ),
-        );
-      },
-
+        ),
+        const SizedBox(height: 7,),
+        Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: indicators(widget.images.length,currentIndex))
+      ]
     );
   }
+}
+List<Widget> indicators(imagesLength,currentIndex) {
+  return List<Widget>.generate(imagesLength, (index) {
+    return Container(
+      margin: const EdgeInsets.all(3),
+      width: 30,
+      height: 6,
+      decoration: BoxDecoration(
+          color: currentIndex == index ? Colors.greenAccent : Colors.black26,
+          borderRadius: BorderRadius.circular(20)
+      ),
+    );
+  });
 }
