@@ -10,14 +10,18 @@ class CategoryScreen extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("All Categories",
+            const Text("All Categories",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                IconButton(onPressed: (){}, icon: Icon(Icons.search_outlined,size: 20,color: Colors.white,)),
-                IconButton(onPressed: (){}, icon: Icon(Icons.mic,size: 20,color: Colors.white,))
+                IconButton(onPressed: (){}, 
+                    icon: const Icon(Icons.search_outlined,size: 20,color: Colors.white,)
+                ),
+                IconButton(onPressed: (){}, 
+                    icon: const Icon(Icons.mic,size: 20,color: Colors.white,)
+                )
               ],
             )
           ],
@@ -25,7 +29,7 @@ class CategoryScreen extends StatelessWidget {
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white
         ),
         child: SingleChildScrollView(
@@ -35,7 +39,7 @@ class CategoryScreen extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 300,
-                  padding: EdgeInsets.all(4.0),
+                  padding: const EdgeInsets.all(4.0),
                   child: GridView.count(
                     primary: false,
                     padding: const EdgeInsets.all(5),
@@ -48,9 +52,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_6.png'),width: 45,height: 45,)
+                            child: const Image(image: AssetImage('assets/images/icons/img_6.png'),width: 45,height: 45,)
                           ),
-                          Text('Offer Zone',style: TextStyle(fontSize: 10),)
+                          const Text('Offer Zone',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -58,9 +62,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_7.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_7.png'),width: 45,height: 45,),
                           ),
-                          Text('Groceries',style: TextStyle(fontSize: 10),)
+                          const Text('Groceries',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -68,9 +72,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_8.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_8.png'),width: 45,height: 45,),
                           ),
-                          Text('Mobiles',style: TextStyle(fontSize: 10),)
+                          const Text('Mobiles',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -78,9 +82,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_9.png',),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_9.png',),width: 45,height: 45,),
                           ),
-                          Text('fashion',style: TextStyle(fontSize: 10),)
+                          const Text('fashion',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -88,9 +92,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_10.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_10.png'),width: 45,height: 45,),
                           ),
-                          Text('Gadgets',style: TextStyle(fontSize: 10),)
+                          const Text('Gadgets',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -98,9 +102,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_11.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_11.png'),width: 45,height: 45,),
                           ),
-                          Text('Appliances',style: TextStyle(fontSize: 10),)
+                          const Text('Appliances',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -108,9 +112,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_12.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_12.png'),width: 45,height: 45,),
                           ),
-                          Text('Furniture',style: TextStyle(fontSize: 10),)
+                          const Text('Furniture',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -118,9 +122,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_14.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_14.png'),width: 45,height: 45,),
                           ),
-                          Text('Toys and kids',style: TextStyle(fontSize: 10),)
+                          const Text('Toys and kids',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -128,9 +132,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_15.png'),width: 45,height: 65,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_15.png'),width: 45,height: 65,),
                           ),
-                          Text('Flights and hotels',style: TextStyle(fontSize: 10),)
+                          const Text('Flights and hotels',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                     ],
@@ -138,9 +142,9 @@ class CategoryScreen extends StatelessWidget {
                 ),
 
                 // More Categories
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
+                  children: [
                     Text('More On Flipkart',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
                     SizedBox(width:10),
                     Expanded(
@@ -154,7 +158,7 @@ class CategoryScreen extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 300,
-                  padding: EdgeInsets.all(4.0),
+                  padding: const EdgeInsets.all(4.0),
                   child: GridView.count(
                     primary: false,
                     padding: const EdgeInsets.all(5),
@@ -167,9 +171,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                               radius: MediaQuery.of(context).size.width*0.08,
                               backgroundColor: Colors.teal,
-                              child: Image(image: AssetImage('assets/images/icons/img_6.png'),width: 45,height: 45,)
+                              child: const Image(image: AssetImage('assets/images/icons/img_6.png'),width: 45,height: 45,)
                           ),
-                          Text('Offer Zone',style: TextStyle(fontSize: 10),)
+                          const Text('Offer Zone',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -177,9 +181,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_7.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_7.png'),width: 45,height: 45,),
                           ),
-                          Text('Groceries',style: TextStyle(fontSize: 10),)
+                          const Text('Groceries',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -187,9 +191,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_8.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_8.png'),width: 45,height: 45,),
                           ),
-                          Text('Mobiles',style: TextStyle(fontSize: 10),)
+                          const Text('Mobiles',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -197,9 +201,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_9.png',),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_9.png',),width: 45,height: 45,),
                           ),
-                          Text('fashion',style: TextStyle(fontSize: 10),)
+                          const Text('fashion',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -207,9 +211,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_10.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_10.png'),width: 45,height: 45,),
                           ),
-                          Text('Gadgets',style: TextStyle(fontSize: 10),)
+                          const Text('Gadgets',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -217,9 +221,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_11.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_11.png'),width: 45,height: 45,),
                           ),
-                          Text('Appliances',style: TextStyle(fontSize: 10),)
+                          const Text('Appliances',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -227,9 +231,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_12.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_12.png'),width: 45,height: 45,),
                           ),
-                          Text('Furniture',style: TextStyle(fontSize: 10),)
+                          const Text('Furniture',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -237,9 +241,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_14.png'),width: 45,height: 45,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_14.png'),width: 45,height: 45,),
                           ),
-                          Text('Toys and kids',style: TextStyle(fontSize: 10),)
+                          const Text('Toys and kids',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                       Column(
@@ -247,9 +251,9 @@ class CategoryScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.08,
                             backgroundColor: Colors.teal,
-                            child: Image(image: AssetImage('assets/images/icons/img_15.png'),width: 45,height: 65,),
+                            child: const Image(image: AssetImage('assets/images/icons/img_15.png'),width: 45,height: 65,),
                           ),
-                          Text('Flights and hotels',style: TextStyle(fontSize: 10),)
+                          const Text('Flights and hotels',style: TextStyle(fontSize: 10),)
                         ],
                       ),
                     ],
@@ -257,9 +261,9 @@ class CategoryScreen extends StatelessWidget {
                 ),
 
                 // Trending
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
+                  children: [
                     Text('Trending Stores',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
                     SizedBox(width:10),
                     Expanded(
@@ -273,7 +277,7 @@ class CategoryScreen extends StatelessWidget {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: 450,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: Colors.white,
                   ),
                   child: Padding(
@@ -295,9 +299,11 @@ class CategoryScreen extends StatelessWidget {
                                   width: 50,
                                   padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
+                                    border: Border.all(width: 0.5, color: Colors.black),
+                                      borderRadius: BorderRadius.circular(2),
                                       color: Colors.green
                                   ),
-                                  child: Column(
+                                  child: const Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
@@ -311,9 +317,11 @@ class CategoryScreen extends StatelessWidget {
                                   width: 50,
                                   padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
-                                      color: Colors.cyan
+                                    borderRadius: BorderRadius.circular(2),
+                                    border: Border.all(width: 0.5, color: Colors.black),
+                                    color: Colors.cyan,
                                   ),
-                                  child: Column(
+                                  child: const Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
@@ -327,9 +335,11 @@ class CategoryScreen extends StatelessWidget {
                                   width: 50,
                                   padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
-                                      color: Colors.blueAccent
+                                    color: Colors.blueAccent,
+                                    borderRadius: BorderRadius.circular(2),
+                                    border: Border.all(width: 0.5, color: Colors.black),
                                   ),
-                                  child: Column(
+                                  child: const Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
@@ -343,9 +353,11 @@ class CategoryScreen extends StatelessWidget {
                                   width: 50,
                                   padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
-                                      color: Colors.orangeAccent
+                                    color: Colors.orangeAccent,
+                                    border: Border.all(width: 0.5, color: Colors.black),
+                                    borderRadius: BorderRadius.circular(2)
                                   ),
-                                  child: Column(
+                                  child: const Column(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [

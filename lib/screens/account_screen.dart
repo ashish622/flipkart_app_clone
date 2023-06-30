@@ -1,3 +1,4 @@
+import 'package:flipkart_home/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class AccountScreen extends StatelessWidget {
@@ -77,8 +78,8 @@ class AccountScreen extends StatelessWidget {
                           ),
                           child: const Row(
                             children: [
-                              Icon(Icons.production_quantity_limits,color: Colors.blue,),
-                              Text('Orders',
+                              Icon(Icons.check_circle_outline_sharp,color: Colors.blue,),
+                              Text('Wishlist',
                                 style: TextStyle(color: Colors.black,fontSize: 14,fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -99,7 +100,7 @@ class AccountScreen extends StatelessWidget {
                           child: const Row(
                             children: [
                               Icon(Icons.production_quantity_limits,color: Colors.blue,),
-                              Text('Orders',
+                              Text('Coupons',
                                 style: TextStyle(color: Colors.black,fontSize: 14,fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -114,8 +115,8 @@ class AccountScreen extends StatelessWidget {
                           ),
                           child: const Row(
                             children: [
-                              Icon(Icons.production_quantity_limits,color: Colors.blue,),
-                              Text('Orders',
+                              Icon(Icons.headset_mic_outlined,color: Colors.blue,),
+                              Text('Help center',
                                 style: TextStyle(color: Colors.black,fontSize: 14,fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -148,13 +149,358 @@ class AccountScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                height: 60,
-                color: Colors.white,
-                child: const Row(
-                  children: [
-                    Icon(Icons.currency_rupee_outlined,color: Colors.blue,)
-                  ],
+
+              // Credit Option
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 8, 0, 4),
+                child: Container(
+                  height: 120,
+                  width: double.infinity,
+                  color: Colors.white,
+                  padding: const EdgeInsets.all(8),
+                  child: const Column(
+                    mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Credit Options',
+                        style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Icon(Icons.note_rounded,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('FlipKart Pay later',
+                                      style: TextStyle(fontSize: 12),
+                                    ),
+                                    Text('Available Balance: 6000 rs. Buy now',
+                                      style: TextStyle(fontSize: 9),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              // Account Settings
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 8, 0, 4),
+                child: Container(
+                  height: 300,
+                  width: double.infinity,
+                  color: Colors.white,
+                  padding: const EdgeInsets.all(8),
+                  child: const Column(
+                    mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Account Settings',
+                        style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Icon(Icons.star_border,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Flipkart Plus')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Icon(Icons.account_circle_outlined,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Edit Profile')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Icon(Icons.credit_card,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Saved cards and wallets')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Icon(Icons.pin_drop_outlined,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Saved Addresses')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Icon(Icons.language_outlined,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Select Language')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Icon(Icons.edit_notifications_outlined,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Notifications Settings')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              // Your Activity
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 8, 0, 4),
+                child: Container(
+                  height: 120,
+                  width: double.infinity,
+                  color: Colors.white,
+                  padding: const EdgeInsets.all(8),
+                  child: const Column(
+                    mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Your Activity',
+                        style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Icon(Icons.note_alt_outlined,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Reviews')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Icon(Icons.question_answer_outlined,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Questions and Answers')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              // Earn With Flipkart
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 8, 0, 4),
+                child: Container(
+                  height: 120,
+                  width: double.infinity,
+                  color: Colors.white,
+                  padding: const EdgeInsets.all(8),
+                  child: const Column(
+                    mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Earn With Flipkart',
+                        style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Icon(Icons.star_border_purple500,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('FLipkart Creator Studio')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Icon(Icons.sell_outlined,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Be a Seller')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              // Feedback and Information
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 8, 0, 4),
+                child: Container(
+                  height: 120,
+                  width: double.infinity,
+                  color: Colors.white,
+                  padding: const EdgeInsets.all(8),
+                  child: const Column(
+                    mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Feedback and Information',
+                        style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Icon(Icons.note_rounded,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Terms, policies and licenses')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Icon(Icons.question_mark_rounded,color: Colors.blue,),
+                                SizedBox(width: 15,),
+                                Text('Brows FAQ\'s')
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios,size: 10,)
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              // LogOut
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: Colors.white,
+                  width: double.infinity,
+                  height: 30,
+                  child: TextButton(
+                    onPressed: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) => const LoginScreen()),
+                      );
+                    },
+                    child: const Text('Log Out',style: TextStyle(color: Colors.blue),),
+                  ),
                 ),
               )
             ],

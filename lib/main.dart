@@ -57,7 +57,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ref==1?Scaffold(
+      home: Scaffold(
         body: PageView(
           controller: _pageController,
           onPageChanged: (index) {
@@ -102,7 +102,8 @@ class _MyAppState extends State<MyApp> {
             ),
           ],
         ),
-      ):const LoginScreen()
+      )
+          // : const LoginScreen()
     );
   }
 }
