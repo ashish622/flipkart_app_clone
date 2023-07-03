@@ -1,4 +1,3 @@
-import 'package:flipkart_home/main.dart';
 import 'package:flutter/material.dart';
 
 class ShoppingCartScreen extends StatelessWidget {

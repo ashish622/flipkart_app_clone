@@ -56,15 +56,22 @@ class AccountScreen extends StatelessWidget {
                         Container(
                           width: 140,
                           height: 40,
+                          padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
                           decoration: BoxDecoration(
                             border: Border.all(width: 1, color: Colors.black12),
                             borderRadius: BorderRadius.circular(10)
                           ),
                           child: const Row(
                             children: [
-                              Icon(Icons.production_quantity_limits,color: Colors.blue,),
-                              Text('Orders',
-                                style: TextStyle(color: Colors.black,fontSize: 14,fontWeight: FontWeight.bold),
+                              Icon(Icons.production_quantity_limits,
+                                color: Colors.blue,),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
+                                child: Text('Orders',
+                                  style: TextStyle(color: Colors.black,
+                                    fontSize: 14,fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -72,15 +79,22 @@ class AccountScreen extends StatelessWidget {
                         Container(
                           width: 140,
                           height: 40,
+                          padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
                           decoration: BoxDecoration(
                               border: Border.all(width: 1, color: Colors.black12),
                               borderRadius: BorderRadius.circular(10)
                           ),
                           child: const Row(
                             children: [
-                              Icon(Icons.check_circle_outline_sharp,color: Colors.blue,),
-                              Text('Wishlist',
-                                style: TextStyle(color: Colors.black,fontSize: 14,fontWeight: FontWeight.bold),
+                              Icon(Icons.check_circle_outline_sharp,
+                                color: Colors.blue,),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
+                                child: Text('Wishlist',
+                                  style: TextStyle(color: Colors.black,
+                                    fontSize: 14,fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -93,15 +107,22 @@ class AccountScreen extends StatelessWidget {
                         Container(
                           width: 140,
                           height: 40,
+                          padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
                           decoration: BoxDecoration(
                               border: Border.all(width: 1, color: Colors.black12),
                               borderRadius: BorderRadius.circular(10)
                           ),
                           child: const Row(
                             children: [
-                              Icon(Icons.production_quantity_limits,color: Colors.blue,),
-                              Text('Coupons',
-                                style: TextStyle(color: Colors.black,fontSize: 14,fontWeight: FontWeight.bold),
+                              Icon(Icons.production_quantity_limits,
+                                color: Colors.blue,),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
+                                child: Text('Coupons',
+                                  style: TextStyle(color: Colors.black,
+                                    fontSize: 14,fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -109,6 +130,7 @@ class AccountScreen extends StatelessWidget {
                         Container(
                           width: 140,
                           height: 40,
+                          padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
                           decoration: BoxDecoration(
                               border: Border.all(width: 1, color: Colors.black12),
                               borderRadius: BorderRadius.circular(10)
@@ -116,8 +138,12 @@ class AccountScreen extends StatelessWidget {
                           child: const Row(
                             children: [
                               Icon(Icons.headset_mic_outlined,color: Colors.blue,),
-                              Text('Help center',
-                                style: TextStyle(color: Colors.black,fontSize: 14,fontWeight: FontWeight.bold),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
+                                child: Text('Help center',
+                                  style: TextStyle(color: Colors.black,
+                                    fontSize: 14,fontWeight: FontWeight.bold,),
+                                ),
                               ),
                             ],
                           ),
@@ -127,6 +153,8 @@ class AccountScreen extends StatelessWidget {
                   ],
                 ),
               ),
+
+              // Verify Mail
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
                 child: Container(
@@ -139,7 +167,7 @@ class AccountScreen extends StatelessWidget {
                       const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Icon(Icons.mail, color: Colors.yellow,size: 32,),
+                          Icon(Icons.mail, color: Colors.blue,size: 32,),
                           SizedBox(width: 10,),
                           Text('Please Add/Verify your mail',
                             style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14),
@@ -160,38 +188,60 @@ class AccountScreen extends StatelessWidget {
                   width: double.infinity,
                   color: Colors.white,
                   padding: const EdgeInsets.all(8),
-                  child: const Column(
+                  child: Column(
                     mainAxisAlignment:MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Credit Options',
+                      const Text('Credit Options',
                         style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,
                             color: Colors.black),
                       ),
                       Padding(
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Icon(Icons.payments_outlined,color: Colors.blue,),
-                                SizedBox(width: 15,),
+                                const Icon(Icons.payments_outlined,color: Colors.blue,),
+                                const SizedBox(width: 15,),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('FlipKart Pay later',
-                                      style: TextStyle(fontSize: 12),
+                                    const Text('FlipKart Pay later',
+                                      style: TextStyle(fontSize: 14),
                                     ),
-                                    Text('Available Balance: 6000 rs. Buy now',
-                                      style: TextStyle(fontSize: 9),
+                                    RichText(
+                                      text: const TextSpan(
+                                        text: 'Available Balance: ',
+                                        style: TextStyle(fontSize: 10,
+                                          color: Colors.black
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: 'Rs. 6000.',
+                                            style: TextStyle(fontSize: 10,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: ' Use Now',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.blue,
+                                          ),
+                                          )
+                                        ]
+                                      ),
                                     )
                                   ],
                                 )
                               ],
                             ),
-                            Icon(Icons.arrow_forward_ios,size: 10,)
+                            const Icon(Icons.arrow_forward_ios,size: 10,)
                           ],
                         ),
                       ),
