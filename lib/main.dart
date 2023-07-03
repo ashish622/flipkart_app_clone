@@ -1,7 +1,7 @@
 import 'package:flipkart_home/screens/account_screen.dart';
 import 'package:flipkart_home/screens/categories_screen.dart';
 import 'package:flipkart_home/screens/notification_screen.dart';
-import 'package:flipkart_home/screens/shoping-cart_screen.dart';
+import 'package:flipkart_home/screens/shoping_cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flipkart_home/screens/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';

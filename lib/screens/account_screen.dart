@@ -132,15 +132,17 @@ class AccountScreen extends StatelessWidget {
                 child: Container(
                   color: Colors.white,
                   height: 60,
+                  padding: const EdgeInsets.fromLTRB(14, 0, 14, 0),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Icon(Icons.mail, color: Colors.yellow,size: 32,),
+                          SizedBox(width: 10,),
                           Text('Please Add/Verify your mail',
-                            style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),
+                            style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14),
                           ),
                         ],
                       ),
