@@ -27,11 +27,6 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
     'assets/images/product/img_12.png',
     'assets/images/product/img_12.png',
   ];
-  final List<String> _products = [
-    'assets/images/product/img_12.png',
-    'assets/images/product/img_13.png',
-    'assets/images/product/img_16.png'
-  ];
   List<ProductModel> product =[
     ProductModel(
       images: 'assets/images/img_5.png',
@@ -52,11 +47,6 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
       details: 'Bigger Discounts',
     )
   ];
-  final Map<String, String> discountedProducts = {
-    'SmartPhones': 'assets/images/img_11.png',
-    'SmartPhone': 'assets/images/img_11.png',
-    'iPhones': 'assets/images/img_11.png',
-  };
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +55,7 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
         Container(
           width: double.infinity,
           height: 80,
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Row(
             children: [
               Column(
@@ -92,17 +82,17 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                       labelText: 'search for products',
                       disabledBorder: InputBorder.none,
                       border: InputBorder.none,
-                      prefixIcon: Icon(Icons.search_outlined,color: Colors.black26,size: 20,),
+                      prefixIcon: const Icon(Icons.search_outlined,color: Colors.black26,size: 20,),
                       suffixIcon: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           IconButton(
                             onPressed: (){},
-                            icon: Icon(Icons.mic_none_rounded,color: Colors.black26,size: 20,),
+                            icon: const Icon(Icons.mic_none_rounded,color: Colors.black26,size: 20,),
                           ),
                           IconButton(
                             onPressed: (){},
-                            icon: Icon(Icons.camera_alt,color: Colors.black26,size: 20,),
+                            icon: const Icon(Icons.camera_alt,color: Colors.black26,size: 20,),
                           )
                         ],
                       )
@@ -283,7 +273,7 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                 // Suggestion and deals
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 120,
+                  height: 140,
                   padding: const EdgeInsets.all(8.0),
                   child: SuggestedProducts(),
                 ),
@@ -358,11 +348,13 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
+                      const Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Suggested for  You',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                          Text('Suggested for  You',
+                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)
+                          ),
                           Text('Based on Your Activity',style: TextStyle(fontSize: 10,),),
                         ],
                       ),
@@ -374,7 +366,7 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                           ),
                           width: 20,
                           height: 20,
-                          child: Icon(Icons.arrow_forward_ios,color: Colors.white,size: 16,),
+                          child: const Icon(Icons.arrow_forward_ios,color: Colors.white,size: 16,),
                         ),
                         onTap: (){
 
@@ -385,8 +377,8 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: const BoxDecoration(
                       color: Colors.white,
                   ),
                   child: Column(
@@ -404,16 +396,28 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
-                                      child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                      child: Image(
+                                        image: AssetImage('assets/images/product/img.png'),
+                                        fit: BoxFit.cover,),
                                     ),
-                                    Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                    Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                    Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                    Text('Headphones',
+                                      style: TextStyle(fontSize: 12,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text('min 50% off',
+                                      style: TextStyle(fontSize: 12,
+                                        color: Colors.green,
+                                        fontWeight: FontWeight.bold,),
+                                    ),
+                                    Text('Best deals',
+                                      style: TextStyle(fontSize: 12,
+                                        color: Colors.black26,),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -429,16 +433,28 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
-                                      child: Image(image: AssetImage('assets/images/product/img_1.png'),fit: BoxFit.cover,),
+                                      child: Image(
+                                        image: AssetImage('assets/images/product/img.png'),
+                                        fit: BoxFit.cover,),
                                     ),
-                                    Text('Paintings',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                    Text('Upto 60% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                    Text('Big Discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                    Text('Headphones',
+                                      style: TextStyle(fontSize: 12,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text('min 50% off',
+                                      style: TextStyle(fontSize: 12,
+                                        color: Colors.green,
+                                        fontWeight: FontWeight.bold,),
+                                    ),
+                                    Text('Best deals',
+                                      style: TextStyle(fontSize: 12,
+                                        color: Colors.black26,),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -454,16 +470,28 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
-                                      child: Image(image: AssetImage('assets/images/product/img_3.png'),fit: BoxFit.cover,),
+                                      child: Image(
+                                        image: AssetImage('assets/images/product/img.png'),
+                                        fit: BoxFit.cover,),
                                     ),
-                                    Text('Artificial Plants',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                    Text('Upto 80% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                    Text('Big discounts',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                    Text('Headphones',
+                                      style: TextStyle(fontSize: 12,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text('min 50% off',
+                                      style: TextStyle(fontSize: 12,
+                                        color: Colors.green,
+                                        fontWeight: FontWeight.bold,),
+                                    ),
+                                    Text('Best deals',
+                                      style: TextStyle(fontSize: 12,
+                                        color: Colors.black26,),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -484,8 +512,8 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
@@ -509,8 +537,8 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
@@ -534,8 +562,8 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                 decoration: BoxDecoration(
                                     border: Border.all(width: 1,color: Colors.black)
                                 ),
-                                child: Column(
-                                  children: const [
+                                child: const Column(
+                                  children: [
                                     SizedBox(
                                       width: double.infinity,
                                       height: 135,
@@ -563,9 +591,12 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: const Text('Featured on FLipkart',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white)),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Featured on FLip kart',
+                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,
+                                color: Colors.white)
+                        ),
                       ),
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
@@ -582,16 +613,27 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                        child: Image(
+                                          image: AssetImage('assets/images/product/img.png'),
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      Text('Headphones',
+                                        style: TextStyle(fontSize: 12,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('min 50% off',
+                                        style: TextStyle(fontSize: 12,color: Colors.green,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('Best deals',
+                                        style: TextStyle(fontSize: 12,color: Colors.black26),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -608,16 +650,27 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                        child: Image(
+                                          image: AssetImage('assets/images/product/img.png'),
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      Text('Headphones',
+                                        style: TextStyle(fontSize: 12,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('min 50% off',
+                                        style: TextStyle(fontSize: 12,color: Colors.green,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('Best deals',
+                                        style: TextStyle(fontSize: 12,color: Colors.black26),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -634,16 +687,27 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                        child: Image(
+                                          image: AssetImage('assets/images/product/img.png'),
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      Text('Headphones',
+                                        style: TextStyle(fontSize: 12,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('min 50% off',
+                                        style: TextStyle(fontSize: 12,
+                                            color: Colors.green,fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('Best deals',
+                                        style: TextStyle(fontSize: 12,color: Colors.black26),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -660,16 +724,27 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                        child: Image(
+                                          image: AssetImage('assets/images/product/img.png'),
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      Text('Headphones',
+                                        style: TextStyle(fontSize: 12,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('min 50% off',
+                                        style: TextStyle(fontSize: 12,color: Colors.green,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('Best deals',
+                                        style: TextStyle(fontSize: 12,color: Colors.black26),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -686,16 +761,27 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                        child: Image(
+                                          image: AssetImage('assets/images/product/img.png'),
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      Text('Headphones',
+                                        style: TextStyle(fontSize: 12,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('min 50% off',
+                                        style: TextStyle(fontSize: 12,color: Colors.green,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('Best deals',
+                                        style: TextStyle(fontSize: 12,color: Colors.black26),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -712,16 +798,27 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                        child: Image(
+                                          image: AssetImage('assets/images/product/img.png'),
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      Text('Headphones',
+                                        style: TextStyle(fontSize: 12,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('min 50% off',
+                                        style: TextStyle(fontSize: 12,
+                                            color: Colors.green,fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('Best deals',
+                                        style: TextStyle(fontSize: 12,color: Colors.black26),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -738,16 +835,27 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                                     border: Border.all(width: 2,color: Colors.white),
                                     color: Colors.white,
                                   ),
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       SizedBox(
                                         width: double.infinity,
                                         height: 130,
-                                        child: Image(image: AssetImage('assets/images/product/img.png'),fit: BoxFit.cover,),
+                                        child: Image(
+                                          image: AssetImage('assets/images/product/img.png'),
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                      Text('Headphones',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                                      Text('min 50% off',style: TextStyle(fontSize: 12,color: Colors.green,fontWeight: FontWeight.bold),),
-                                      Text('Best deals',style: TextStyle(fontSize: 12,color: Colors.black26),),
+                                      Text('Headphones',
+                                        style: TextStyle(fontSize: 12,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('min 50% off',
+                                        style: TextStyle(fontSize: 12,
+                                            color: Colors.green,fontWeight: FontWeight.bold),
+                                      ),
+                                      Text('Best deals',
+                                        style: TextStyle(fontSize: 12,color: Colors.black26),
+                                      ),
                                     ],
                                   ),
                                 ),

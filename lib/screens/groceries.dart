@@ -424,7 +424,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                   padding: const EdgeInsets.fromLTRB(6, 16, 6, 16),
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width,
-                    height: 125,
+                    height: 140,
                     child: SuggestedProducts()
                   ),
                 ),

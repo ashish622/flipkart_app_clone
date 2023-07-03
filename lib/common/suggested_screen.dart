@@ -46,7 +46,7 @@ class SuggestedProducts extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 30,
+                          height: 35,
                           width: double.infinity,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -66,7 +66,7 @@ class SuggestedProducts extends StatelessWidget {
           );
         }
         return const Center(
-          child: CircularProgressIndicator(),
+          child: CircularProgressIndicator(color: Colors.grey,),
         );
       },
     );
