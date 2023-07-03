@@ -5,8 +5,12 @@ import 'package:flipkart_home/screens/notification_screen.dart';
 import 'package:flipkart_home/screens/shoping-cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flipkart_home/screens/home_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -18,7 +22,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
+  final CollectionReference _products =
+  FirebaseFirestore.instance.collection('products');
   int selectedIndex = 0;
   int ref = 0;
   List<Widget> pages = [
@@ -103,7 +108,7 @@ class _MyAppState extends State<MyApp> {
           ],
         ),
       )
-          // : const LoginScreen()
+      // : const LoginScreen()
     );
   }
 }

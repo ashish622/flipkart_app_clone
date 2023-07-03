@@ -1,148 +1,240 @@
+import 'package:flipkart_home/screens/register_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'dart:io';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  static const String id = 'login_screen';
+
+  const LoginScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  String vtext = " ";
-  final TextEditingController _controller = TextEditingController();
+  final TextEditingController _emailIdController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final bool _isLoading = false;
+
+  final _textStyleBlack = const TextStyle(fontSize: 12.0, color: Colors.black);
+  final _textStyleGrey = const TextStyle(fontSize: 12.0, color: Colors.grey);
+  final _textStyleBlueGrey = const TextStyle(fontSize: 12.0, color: Colors.blueGrey);
+
+  @override
+  void dispose() {
+    super.dispose();
+    _emailIdController.dispose();
+    _passwordController.dispose();
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        bottomOpacity: 0,
-        title: const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image(image: AssetImage('assets/images/icons/img_3.png',),width: 30,height: 20,)
-          ],
-        ),
-      ),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        color: Colors.white,
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              width: double.infinity,
-              height: 190,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(18, 18, 18, 2),
-                    child: Text('Log in for the best experience',
-                      style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: Colors.black),
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(18, 8, 18, 20),
-                    child: Text(
-                      style: TextStyle(fontSize: 12,color: Colors.black),
-                      'Enter your phone number to continue',
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(18.0),
-                    child: Stack(
+      bottomNavigationBar: _bottomBar(),
+      body: _body(),
+    );
+  }
 
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width*0.8,
-                          height: 45,
-                          decoration: const BoxDecoration(
-                            border: Border(
-                              bottom: BorderSide(
-                                color: Colors.blue,
-                                width: 1,
-                              ),
-                                right: BorderSide(
-                                  color: Colors.blue,
-                                  width: 1,
-                                ),
-                                left: BorderSide(
-                                  color: Colors.blue,
-                                  width: 1,
-                                  style: BorderStyle.solid
-                                ),
-                            ),
-                            // borderRadius: BorderRadius.only(
-                            //   bottomLeft: Radius.circular(10),
-                            //   bottomRight: Radius.circular(10),
-                            //   topRight: Radius.circular(10),
-                            //   topLeft: Radius.circular(10),
-                            // )
-                          ),
-                          child: TextFormField(
-                            controller: _controller,
-                            onChanged: (controller){
-                              vtext = _controller.text;
-                            },
-                            decoration: const InputDecoration(
-                              prefix: Text('+91-'),
-                              border: InputBorder.none,
-                            ),
-                            keyboardType: const TextInputType.numberWithOptions(),
-                          ),
-                        ),
-                        const Positioned(
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(10, 0, 4, 0),
-                            child: Row(
-                              children: [
-                                Text('Phone number',
-                                  style: TextStyle(color: Colors.blue,fontSize: 10),
-                                ),
-                                Divider(
-                                  color: Colors.blue,
-                                  thickness: 2,
-                                )
-                              ],
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(0, 5, 30, 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text('Use E-mail',style: TextStyle(fontSize: 14,color: Colors.blue),)
-                      ],
-                    ),
-                  )
-                ],
-              ),
+  Widget _userIDEditContainer() {
+    return TextField(
+      controller: _emailIdController,
+      decoration: const InputDecoration(
+          hintText: 'Phone number, email or username',
+          border: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.black),
+          ),
+          isDense: true),
+      style: _textStyleBlack,
+    );
+  }
+
+  Widget _passwordEditContainer() {
+    return Container(
+      padding: const EdgeInsets.only(top: 5.0),
+      child: TextField(
+        controller: _passwordController,
+        obscureText: true,
+        decoration: const InputDecoration(
+            hintText: 'Password',
+            border: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.black),
             ),
-            InkWell(
-              child: Container(
-                width: MediaQuery.of(context).size.width*0.9,
-                height: 40,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: vtext.length==10?Colors.blue:Colors.grey,
-                ),
-                child: const Center(child: Text('Continue')),
-              ),
-              onTap: (){
-                vtext.length==10?Navigator.pushReplacementNamed(context, 'continue')
-                :const LoginScreen();
-              },
-            )
-          ],
+            isDense: true),
+        style: _textStyleBlack,
+      ),
+    );
+  }
+
+  Widget _loginContainer() {
+    return GestureDetector(
+      onTap: _logInUser,
+      child: Container(
+        alignment: Alignment.center,
+        margin: const EdgeInsets.only(top: 10.0),
+        width: 500.0,
+        height: 40.0,
+        color: Colors.blue,
+        child: _isLoading
+            ? const Center(
+          child: CircularProgressIndicator(
+            color: Colors.white,
+          ),
+        )
+            :  const Text(
+          "Log In",
+          style: TextStyle(color: Colors.white),
         ),
       ),
     );
   }
+
+  Widget _facebookContainer() {
+    return Container(
+      alignment: Alignment.center,
+      margin: const EdgeInsets.only(top: 10.0),
+      width: 500.0,
+      height: 40.0,
+      color: Colors.blue,
+      child: GestureDetector(
+        onTap: null,
+        child: const Text(
+          "Log in with facebook",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
+
+  Widget _bottomBar() {
+    return Container(
+      alignment: Alignment.center,
+      height: 49.5,
+      child: Column(
+        children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                height: 1.0,
+                color: Colors.grey.withOpacity(0.7),
+              ),
+              Padding(
+                  padding: const EdgeInsets.only(bottom: 0.5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text('Don\'t have an account?', style: _textStyleGrey),
+                      TextButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, SignupScreen.id),
+                        child: Text('Sign Up.', style: _textStyleGrey),
+                      ),
+                    ],
+                  )),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _body() {
+    return Container(
+      alignment: Alignment.center,
+      padding: const EdgeInsets.all(25.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const Padding(
+            padding: EdgeInsets.only(top: 25.0, bottom: 15.0),
+            child: Text(
+              'Flipkart',
+              style: TextStyle(fontFamily: 'Billabong', fontSize: 50.0),
+            ),
+          ),
+          _userIDEditContainer(),
+          _passwordEditContainer(),
+          _loginContainer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Forgot your login details?',
+                style: _textStyleGrey,
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Get help logging in.',
+                  style: _textStyleBlueGrey,
+                ),
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                height: 1.0,
+                width: MediaQuery.of(context).size.width / 2.7,
+                color: Colors.grey,
+                child: const ListTile(),
+              ),
+              const Text(
+                ' OR ',
+                style: TextStyle(color: Colors.blueGrey),
+              ),
+              Container(
+                height: 1.0,
+                width: MediaQuery.of(context).size.width / 2.7,
+                color: Colors.grey,
+              ),
+            ],
+          ),
+          _facebookContainer()
+        ],
+      ),
+    );
+  }
+
+  _showEmptyDialog(String title) {
+    if (Platform.isAndroid) {
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) => AlertDialog(
+          content: Text("$title can't be empty"),
+          actions: <Widget>[
+            TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Text("OK"))
+          ],
+        ),
+      );
+    } else if (Platform.isIOS) {
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) => CupertinoAlertDialog(
+          content: Text("$title can't be empty"),
+          actions: <Widget>[
+            TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Text("OK"))
+          ],
+        ),
+      );
+    }
+  }
+}
+
+void _logInUser() {
+
 }

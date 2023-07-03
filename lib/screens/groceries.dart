@@ -425,7 +425,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                     height: 125,
-                    child: SuggestedProducts(products: _products,)
+                    child: SuggestedProducts()
                   ),
                 ),
 

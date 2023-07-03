@@ -496,7 +496,7 @@ class AccountScreen extends StatelessWidget {
                   child: TextButton(
                     onPressed: (){
                       Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) => const LoginScreen()),
+                        MaterialPageRoute(builder: (BuildContext context) =>  LoginScreen()),
                       );
                     },
                     child: const Text('Log Out',style: TextStyle(color: Colors.blue),),

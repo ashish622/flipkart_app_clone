@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "899049871404",
+    "project_id": "demoflip-d5f70",
+    "storage_bucket": "demoflip-d5f70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899049871404:android:dd601af1a9988983455989",
+        "android_client_info": {
+          "package_name": "com.example.flipkart_home"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "899049871404-9gfm417slh152itk12ngt6sollr5q5ks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC2yDOZyowg_58uCmo-QXXfS_ErljvVcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "899049871404-9gfm417slh152itk12ngt6sollr5q5ks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

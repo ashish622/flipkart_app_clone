@@ -285,7 +285,7 @@ class _FlipkartScreenState extends State<FlipkartScreen> {
                   width: MediaQuery.of(context).size.width,
                   height: 120,
                   padding: const EdgeInsets.all(8.0),
-                  child: SuggestedProducts(products: _products,),
+                  child: SuggestedProducts(),
                 ),
 
                 //Discounts on products
