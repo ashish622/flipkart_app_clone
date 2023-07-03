@@ -1,9 +1,14 @@
+import 'package:flipkart_home/main.dart';
 import 'package:flutter/material.dart';
 
-class ShoppingCartScreen extends StatelessWidget {
- ShoppingCartScreen({Key? key}) : super(key: key);
+class ShoppingCartScreen extends StatefulWidget {
+ const ShoppingCartScreen({Key? key}) : super(key: key);
 
-  int count = 1;
+  @override
+  State<ShoppingCartScreen> createState() => _ShoppingCartScreenState();
+}
+
+class _ShoppingCartScreenState extends State<ShoppingCartScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -96,6 +101,7 @@ class ShoppingCartScreen extends StatelessWidget {
                             ListView.builder(
                               itemCount: 4,
                               itemBuilder: (BuildContext context, index){
+                                var count=1;
                                 return Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
@@ -117,27 +123,31 @@ class ShoppingCartScreen extends StatelessWidget {
                                               width: 120,
                                               child: Row(
                                                 children: [
-                                                  FloatingActionButton(
+                                                  IconButton(
                                                     onPressed: (){
-                                                      if(count>0){
-                                                        count = count-1;
+                                                      if (count>0){
+                                                        setState(() {
+                                                          count = count - 1;
+                                                        });
                                                       }
                                                     },
-                                                    child: const Icon(Icons.add,
-                                                      color: Colors.green,
-                                                      size: 18,
+                                                    icon: const Icon(
+                                                      Icons.remove_circle_outline,
+                                                      color: Colors.blue,
                                                     ),
                                                   ),
                                                   Text('$count'),
-                                                  FloatingActionButton(
+                                                  IconButton(
                                                     onPressed: (){
-                                                      if(count<10){
-                                                        count = count+1;
+                                                      if (count<10){
+                                                        setState(() {
+                                                          count = count + 1;
+                                                        });
                                                       }
                                                     },
-                                                    child: const Icon(Icons.remove,
-                                                      color: Colors.red,
-                                                      size: 10,
+                                                    icon: const Icon(
+                                                      Icons.add_circle_outline,
+                                                      color: Colors.blue,
                                                     ),
                                                   ),
                                                 ],
@@ -194,7 +204,14 @@ class ShoppingCartScreen extends StatelessWidget {
                                           color: Colors.yellow
                                       ),
                                       child: TextButton(
-                                        onPressed: (){},
+                                        onPressed: (){
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (BuildContext context) => MyApp(),
+                                            ),
+                                          );
+                                        },
                                         child: const Text('Add More',
                                           style: TextStyle(
                                               color: Colors.green
@@ -211,7 +228,8 @@ class ShoppingCartScreen extends StatelessWidget {
                                         color: Colors.green
                                       ),
                                       child: TextButton(
-                                        onPressed: (){},
+                                        onPressed: (){
+                                        },
                                         child: const Text(
                                           'Checkout',
                                           style: TextStyle(
