@@ -48,11 +48,6 @@ class _GroceryScreenState extends State<GroceryScreen> {
       details: 'Fresh Deals',
     ),
   ];
-  final List<String> _products = [
-    'assets/images/product/img_15.png',
-    'assets/images/product/img_15.png',
-    'assets/images/product/img_15.png'
-  ];
   final Map<String, String> discountedProducts = {
     'SmartPhones': 'assets/images/img_11.png',
     'SmartPhone': 'assets/images/img_11.png',

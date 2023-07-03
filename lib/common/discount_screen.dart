@@ -33,7 +33,9 @@ class _DiscountProductState extends State<DiscountProduct> {
                 SizedBox(
                   width: double.infinity,
                   height: 130,
-                  child: Image(image: AssetImage(widget.product[0].images),fit: BoxFit.cover,),
+                  child: Image(
+                    image: AssetImage(widget.product[0].images),
+                    fit: BoxFit.cover,),
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.end,
