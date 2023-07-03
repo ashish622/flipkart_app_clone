@@ -1,240 +1,123 @@
-import 'package:flipkart_home/screens/register_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'dart:io';
 
 class LoginScreen extends StatefulWidget {
-  static const String id = 'login_screen';
-
   const LoginScreen({super.key});
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final TextEditingController _emailIdController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-  final bool _isLoading = false;
-
-  final _textStyleBlack = const TextStyle(fontSize: 12.0, color: Colors.black);
-  final _textStyleGrey = const TextStyle(fontSize: 12.0, color: Colors.grey);
-  final _textStyleBlueGrey = const TextStyle(fontSize: 12.0, color: Colors.blueGrey);
-
-  @override
-  void dispose() {
-    super.dispose();
-    _emailIdController.dispose();
-    _passwordController.dispose();
-  }
-
-
-
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: _bottomBar(),
-      body: _body(),
-    );
-  }
-
-  Widget _userIDEditContainer() {
-    return TextField(
-      controller: _emailIdController,
-      decoration: const InputDecoration(
-          hintText: 'Phone number, email or username',
-          border: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.black),
-          ),
-          isDense: true),
-      style: _textStyleBlack,
-    );
-  }
-
-  Widget _passwordEditContainer() {
-    return Container(
-      padding: const EdgeInsets.only(top: 5.0),
-      child: TextField(
-        controller: _passwordController,
-        obscureText: true,
-        decoration: const InputDecoration(
-            hintText: 'Password',
-            border: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-            ),
-            isDense: true),
-        style: _textStyleBlack,
-      ),
-    );
-  }
-
-  Widget _loginContainer() {
-    return GestureDetector(
-      onTap: _logInUser,
-      child: Container(
-        alignment: Alignment.center,
-        margin: const EdgeInsets.only(top: 10.0),
-        width: 500.0,
-        height: 40.0,
-        color: Colors.blue,
-        child: _isLoading
-            ? const Center(
-          child: CircularProgressIndicator(
-            color: Colors.white,
-          ),
-        )
-            :  const Text(
-          "Log In",
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-    );
-  }
-
-  Widget _facebookContainer() {
-    return Container(
-      alignment: Alignment.center,
-      margin: const EdgeInsets.only(top: 10.0),
-      width: 500.0,
-      height: 40.0,
-      color: Colors.blue,
-      child: GestureDetector(
-        onTap: null,
-        child: const Text(
-          "Log in with facebook",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
-      ),
-    );
-  }
-
-  Widget _bottomBar() {
-    return Container(
-      alignment: Alignment.center,
-      height: 49.5,
-      child: Column(
-        children: <Widget>[
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                height: 1.0,
-                color: Colors.grey.withOpacity(0.7),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Colors.white10,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(height: 20,),
+            const CircleAvatar(
+              radius: 20,
+              child: Image(image: AssetImage('assets/images/logos/logo.png'),
+                fit: BoxFit.cover,
               ),
-              Padding(
-                  padding: const EdgeInsets.only(bottom: 0.5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text('Don\'t have an account?', style: _textStyleGrey),
-                      TextButton(
-                        onPressed: () =>
-                            Navigator.pushNamed(context, SignupScreen.id),
-                        child: Text('Sign Up.', style: _textStyleGrey),
+            ),
+            const Text('Welcome Back!',
+              style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.black),
+              textAlign: TextAlign.center,
+            ),
+            const Text('Login here to get more of our service',
+              style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 30,),
+            Container(
+              width: MediaQuery.of(context).size.width*0.7,
+              height: 350,
+              decoration: BoxDecoration(
+                border: Border.all(width: 2, color: Colors.black),
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 18,),
+                  const Text('Login',
+                    style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold,color: Colors.black),
+                  ),
+                  const SizedBox(height: 38,),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('E-mail'),
+                      const SizedBox(height: 10,),
+                      Container(
+                        height: 40,
+                        width: MediaQuery.of(context).size.width*0.6,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(width: 1, color: Colors.blue)
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                          child: TextFormField(
+                            controller: _emailController,
+                            decoration: const InputDecoration(
+                              hintText: 'E-mail',
+                              border: InputBorder.none,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
-                  )),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
+                  ),
+                  const SizedBox(height: 10,),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('password'),
+                      const SizedBox(height: 10,),
+                      Container(
+                        height: 40,
+                        width: MediaQuery.of(context).size.width*0.6,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(width: 1, color: Colors.blue)
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                          child: TextFormField(
+                            controller: _passController,
+                            obscureText: true,
+                            decoration: const InputDecoration(
+                              hintText: 'Password',
+                              border: InputBorder.none,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 28,),
+                  ElevatedButton(
+                    onPressed: (){
 
-  Widget _body() {
-    return Container(
-      alignment: Alignment.center,
-      padding: const EdgeInsets.all(25.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.only(top: 25.0, bottom: 15.0),
-            child: Text(
-              'Flipkart',
-              style: TextStyle(fontFamily: 'Billabong', fontSize: 50.0),
+                    },
+                    child: const Text('Login'),
+                  )
+                ],
+              ),
             ),
-          ),
-          _userIDEditContainer(),
-          _passwordEditContainer(),
-          _loginContainer(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'Forgot your login details?',
-                style: _textStyleGrey,
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Get help logging in.',
-                  style: _textStyleBlueGrey,
-                ),
-              )
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                height: 1.0,
-                width: MediaQuery.of(context).size.width / 2.7,
-                color: Colors.grey,
-                child: const ListTile(),
-              ),
-              const Text(
-                ' OR ',
-                style: TextStyle(color: Colors.blueGrey),
-              ),
-              Container(
-                height: 1.0,
-                width: MediaQuery.of(context).size.width / 2.7,
-                color: Colors.grey,
-              ),
-            ],
-          ),
-          _facebookContainer()
-        ],
+          ],
+        ),
       ),
     );
   }
-
-  _showEmptyDialog(String title) {
-    if (Platform.isAndroid) {
-      showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (BuildContext context) => AlertDialog(
-          content: Text("$title can't be empty"),
-          actions: <Widget>[
-            TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: const Text("OK"))
-          ],
-        ),
-      );
-    } else if (Platform.isIOS) {
-      showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (BuildContext context) => CupertinoAlertDialog(
-          content: Text("$title can't be empty"),
-          actions: <Widget>[
-            TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: const Text("OK"))
-          ],
-        ),
-      );
-    }
-  }
-}
-
-void _logInUser() {
-
 }

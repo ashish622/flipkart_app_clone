@@ -18,7 +18,7 @@ class AccountScreen extends StatelessWidget {
               style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),
             ),
             Container(
-              width: 40,
+              width: 60,
               height: 25,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
@@ -27,7 +27,7 @@ class AccountScreen extends StatelessWidget {
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Image(image: AssetImage('assets/images/icons/img.png'),width: 10,height: 10,),
+                  Image(image: AssetImage('assets/images/icons/img.png'),width: 16,height: 16,),
                   Text('64',
                     style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12,color: Colors.black),
                   )
@@ -45,118 +45,124 @@ class AccountScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 100,
+                height: 120,
                 color: Colors.white,
+                padding: const EdgeInsets.fromLTRB(15, 15, 15, 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          width: 140,
-                          height: 40,
-                          padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
-                          decoration: BoxDecoration(
-                            border: Border.all(width: 1, color: Colors.black12),
-                            borderRadius: BorderRadius.circular(10)
-                          ),
-                          child: const Row(
-                            children: [
-                              Icon(Icons.production_quantity_limits,
-                                color: Colors.blue,),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
-                                child: Text('Orders',
-                                  style: TextStyle(color: Colors.black,
-                                    fontSize: 14,fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          width: 140,
-                          height: 40,
-                          padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
-                          decoration: BoxDecoration(
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 140,
+                            height: 40,
+                            padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
+                            decoration: BoxDecoration(
                               border: Border.all(width: 1, color: Colors.black12),
                               borderRadius: BorderRadius.circular(10)
-                          ),
-                          child: const Row(
-                            children: [
-                              Icon(Icons.check_circle_outline_sharp,
-                                color: Colors.blue,),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
-                                child: Text('Wishlist',
-                                  style: TextStyle(color: Colors.black,
-                                    fontSize: 14,fontWeight: FontWeight.bold,
+                            ),
+                            child: const Row(
+                              children: [
+                                Icon(Icons.production_quantity_limits,
+                                  color: Colors.blue,),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
+                                  child: Text('Orders',
+                                    style: TextStyle(color: Colors.black,
+                                      fontSize: 14,fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                          Container(
+                            width: 140,
+                            height: 40,
+                            padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
+                            decoration: BoxDecoration(
+                                border: Border.all(width: 1, color: Colors.black12),
+                                borderRadius: BorderRadius.circular(10)
+                            ),
+                            child: const Row(
+                              children: [
+                                Icon(Icons.check_circle_outline_sharp,
+                                  color: Colors.blue,),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
+                                  child: Text('Wishlist',
+                                    style: TextStyle(color: Colors.black,
+                                      fontSize: 14,fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          width: 140,
-                          height: 40,
-                          padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1, color: Colors.black12),
-                              borderRadius: BorderRadius.circular(10)
-                          ),
-                          child: const Row(
-                            children: [
-                              Icon(Icons.production_quantity_limits,
-                                color: Colors.blue,),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
-                                child: Text('Coupons',
-                                  style: TextStyle(color: Colors.black,
-                                    fontSize: 14,fontWeight: FontWeight.bold,
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 140,
+                            height: 40,
+                            padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
+                            decoration: BoxDecoration(
+                                border: Border.all(width: 1, color: Colors.black12),
+                                borderRadius: BorderRadius.circular(10)
+                            ),
+                            child: const Row(
+                              children: [
+                                Icon(Icons.production_quantity_limits,
+                                  color: Colors.blue,),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
+                                  child: Text('Coupons',
+                                    style: TextStyle(color: Colors.black,
+                                      fontSize: 14,fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                        Container(
-                          width: 140,
-                          height: 40,
-                          padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1, color: Colors.black12),
-                              borderRadius: BorderRadius.circular(10)
-                          ),
-                          child: const Row(
-                            children: [
-                              Icon(Icons.headset_mic_outlined,color: Colors.blue,),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
-                                child: Text('Help center',
-                                  style: TextStyle(color: Colors.black,
-                                    fontSize: 14,fontWeight: FontWeight.bold,),
+                          Container(
+                            width: 140,
+                            height: 40,
+                            padding: const EdgeInsets.fromLTRB(8, 5, 5, 5),
+                            decoration: BoxDecoration(
+                                border: Border.all(width: 1, color: Colors.black12),
+                                borderRadius: BorderRadius.circular(10)
+                            ),
+                            child: const Row(
+                              children: [
+                                Icon(Icons.headset_mic_outlined,color: Colors.blue,),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
+                                  child: Text('Help center',
+                                    style: TextStyle(color: Colors.black,
+                                      fontSize: 14,fontWeight: FontWeight.bold,),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
-
               // Verify Mail
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
                 child: Container(
                   color: Colors.white,
                   height: 60,
@@ -544,11 +550,11 @@ class AccountScreen extends StatelessWidget {
                 child: Container(
                   color: Colors.white,
                   width: double.infinity,
-                  height: 30,
+                  height: 40,
                   child: TextButton(
                     onPressed: (){
                       Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) =>  LoginScreen()),
+                        MaterialPageRoute(builder: (BuildContext context) =>  const LoginScreen()),
                       );
                     },
                     child: const Text('Log Out',style: TextStyle(color: Colors.blue),),
