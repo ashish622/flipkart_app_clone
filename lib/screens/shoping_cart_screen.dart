@@ -2,7 +2,9 @@ import 'package:flipkart_home/main.dart';
 import 'package:flutter/material.dart';
 
 class ShoppingCartScreen extends StatelessWidget {
-  const ShoppingCartScreen({Key? key}) : super(key: key);
+ ShoppingCartScreen({Key? key}) : super(key: key);
+
+  int count = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -86,58 +88,146 @@ class ShoppingCartScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 800,
+                      Container(
+                        color: Colors.white10,
+                        height: MediaQuery.of(context).size.height*0.75,
                         width: double.infinity,
-                        // child: GridView.builder(
-                        //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        //     crossAxisCount: 1,
-                        //   ),
-                        //   itemCount: 5,
-                        //   itemBuilder: (BuildContext context, index){
-                        //     return Padding(
-                        //       padding: const EdgeInsets.all(18.0),
-                        //       child: Card(
-                        //         child: InkWell(
-                        //           splashColor: Colors.blue.withAlpha(30),
-                        //           onTap: () {
-                        //             debugPrint('Card tapped.');
-                        //           },
-                        //           child: Container(
-                        //             height: 20,
-                        //             width: double.infinity,
-                        //             padding: const EdgeInsets.all(15),
-                        //             color: Colors.white,
-                        //             child: const Row(
-                        //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        //               children: [
-                        //                 Column(
-                        //                   mainAxisAlignment: MainAxisAlignment.center,
-                        //                   crossAxisAlignment: CrossAxisAlignment.center,
-                        //                   children: [
-                        //                     Image(image: AssetImage('assets/images/img_15.png'),
-                        //                       width: 50,height: 50,
-                        //                     ),
-                        //                     Text('Count'),
-                        //                   ],
-                        //                 ),
-                        //                 Column(
-                        //                   mainAxisAlignment: MainAxisAlignment.center,
-                        //                   children: [
-                        //                     Text('Product Name'),
-                        //                     Text('Product Details'),
-                        //                     Text('Price'),
-                        //                   ],
-                        //                 )
-                        //               ],
-                        //             ),
-                        //           )
-                        //         ),
-                        //       ),
-                        //     );
-                        //   },
-                        // ),
-                      )
+                        child: Stack(
+                          children: [
+                            ListView.builder(
+                              itemCount: 4,
+                              itemBuilder: (BuildContext context, index){
+                                return Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 90,
+                                    color: Colors.white,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            const Image(
+                                              image: AssetImage('assets/images/img_14.png'),
+                                              width: 70,
+                                              height: 60,
+                                            ),
+                                            SizedBox(
+                                              height: 25,
+                                              width: 120,
+                                              child: Row(
+                                                children: [
+                                                  FloatingActionButton(
+                                                    onPressed: (){
+                                                      if(count>0){
+                                                        count = count-1;
+                                                      }
+                                                    },
+                                                    child: const Icon(Icons.add,
+                                                      color: Colors.green,
+                                                      size: 18,
+                                                    ),
+                                                  ),
+                                                  Text('$count'),
+                                                  FloatingActionButton(
+                                                    onPressed: (){
+                                                      if(count<10){
+                                                        count = count+1;
+                                                      }
+                                                    },
+                                                    child: const Icon(Icons.remove,
+                                                      color: Colors.red,
+                                                      size: 10,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const Column(
+                                          children: [
+                                            Text('Dobour red toothpaste',
+                                              style: TextStyle(
+                                                fontSize: 20,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            Text('For Strong tooth and Fresh breathes',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                            Text('\$9',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                            Positioned(
+                              bottom: 4,
+                              right: 4,
+                              child: Container(
+                                height: 60,
+                                width: MediaQuery.of(context).size.width*0.9,
+                                color: Colors.white,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: MediaQuery.of(context).size.width*0.40,
+                                      height: 40,
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(16),
+                                          color: Colors.yellow
+                                      ),
+                                      child: TextButton(
+                                        onPressed: (){},
+                                        child: const Text('Add More',
+                                          style: TextStyle(
+                                              color: Colors.green
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 20,),
+                                    Container(
+                                      width: MediaQuery.of(context).size.width*0.40,
+                                      height: 40,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(16),
+                                        color: Colors.green
+                                      ),
+                                      child: TextButton(
+                                        onPressed: (){},
+                                        child: const Text(
+                                          'Checkout',
+                                          style: TextStyle(
+                                            color: Colors.yellow
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )
+                          ]
+                        )
+                      ),
                     ],
                   ),
                 ),

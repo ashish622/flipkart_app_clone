@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
     const CategoryScreen(),
     const NotificationScreen(),
     const AccountScreen(),
-    const ShoppingCartScreen()
+    ShoppingCartScreen()
   ];
   final PageController _pageController = PageController(initialPage: 0);
 
@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> {
               selectedIndex = index;
             });
           },
-          children: const [
+          children: [
             Homepage(),
             CategoryScreen(),
             NotificationScreen(),
